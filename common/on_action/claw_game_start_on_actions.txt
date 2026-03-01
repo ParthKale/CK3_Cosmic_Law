@@ -1,0 +1,16 @@
+# Assign Rashi to all living characters at game start (when Cosmic Law is enabled).
+on_game_start_after_lobby = {
+	on_actions = { claw_on_game_start }
+}
+
+on_game_start = {
+	on_actions = { claw_on_game_start }
+}
+
+claw_on_game_start = {
+	effect = {
+		every_living_character = {
+			assign_random_rashi_effect = yes
+		}
+	}
+}

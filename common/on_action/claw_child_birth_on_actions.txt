@@ -1,0 +1,10 @@
+# Assign Rashi (Moon sign) when a child is born. Scope = child.
+on_birth_child = {
+	on_actions = { claw_on_birth_child }
+}
+
+claw_on_birth_child = {
+	effect = {
+		assign_random_rashi_effect = yes
+	}
+}

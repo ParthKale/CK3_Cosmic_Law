@@ -1,0 +1,122 @@
+# Cosmic Law: 12 Rashi (Moon sign) traits — Vedic astrology
+# One trait per character (Janma Rashi). Icons in gfx/interface/icons/traits/
+
+rashi_mesha = {
+	name = trait_rashi_mesha
+	icon = "rashi_mesha.dds"
+	desc = trait_rashi_mesha_desc
+	genetic = no
+	same_opinion = 10
+	ruler_designer_cost = 0
+	opposites = { rashi_vrishabha rashi_mithuna rashi_karka rashi_simha rashi_kanya rashi_tula rashi_vrischika rashi_dhanu rashi_makara rashi_kumbha rashi_meena }
+}
+
+rashi_vrishabha = {
+	name = trait_rashi_vrishabha
+	icon = "rashi_vrishabha.dds"
+	desc = trait_rashi_vrishabha_desc
+	genetic = no
+	same_opinion = 10
+	ruler_designer_cost = 0
+	opposites = { rashi_mesha rashi_mithuna rashi_karka rashi_simha rashi_kanya rashi_tula rashi_vrischika rashi_dhanu rashi_makara rashi_kumbha rashi_meena }
+}
+
+rashi_mithuna = {
+	name = trait_rashi_mithuna
+	icon = "rashi_mithuna.dds"
+	desc = trait_rashi_mithuna_desc
+	genetic = no
+	same_opinion = 10
+	ruler_designer_cost = 0
+	opposites = { rashi_mesha rashi_vrishabha rashi_karka rashi_simha rashi_kanya rashi_tula rashi_vrischika rashi_dhanu rashi_makara rashi_kumbha rashi_meena }
+}
+
+rashi_karka = {
+	name = trait_rashi_karka
+	icon = "rashi_karka.dds"
+	desc = trait_rashi_karka_desc
+	genetic = no
+	same_opinion = 10
+	ruler_designer_cost = 0
+	opposites = { rashi_mesha rashi_vrishabha rashi_mithuna rashi_simha rashi_kanya rashi_tula rashi_vrischika rashi_dhanu rashi_makara rashi_kumbha rashi_meena }
+}
+
+rashi_simha = {
+	name = trait_rashi_simha
+	icon = "rashi_simha.dds"
+	desc = trait_rashi_simha_desc
+	genetic = no
+	same_opinion = 10
+	ruler_designer_cost = 0
+	opposites = { rashi_mesha rashi_vrishabha rashi_mithuna rashi_karka rashi_kanya rashi_tula rashi_vrischika rashi_dhanu rashi_makara rashi_kumbha rashi_meena }
+}
+
+rashi_kanya = {
+	name = trait_rashi_kanya
+	icon = "rashi_kanya.dds"
+	desc = trait_rashi_kanya_desc
+	genetic = no
+	same_opinion = 10
+	ruler_designer_cost = 0
+	opposites = { rashi_mesha rashi_vrishabha rashi_mithuna rashi_karka rashi_simha rashi_tula rashi_vrischika rashi_dhanu rashi_makara rashi_kumbha rashi_meena }
+}
+
+rashi_tula = {
+	name = trait_rashi_tula
+	icon = "rashi_tula.dds"
+	desc = trait_rashi_tula_desc
+	genetic = no
+	same_opinion = 10
+	ruler_designer_cost = 0
+	opposites = { rashi_mesha rashi_vrishabha rashi_mithuna rashi_karka rashi_simha rashi_kanya rashi_vrischika rashi_dhanu rashi_makara rashi_kumbha rashi_meena }
+}
+
+rashi_vrischika = {
+	name = trait_rashi_vrischika
+	icon = "rashi_vrischika.dds"
+	desc = trait_rashi_vrischika_desc
+	genetic = no
+	same_opinion = 10
+	ruler_designer_cost = 0
+	opposites = { rashi_mesha rashi_vrishabha rashi_mithuna rashi_karka rashi_simha rashi_kanya rashi_tula rashi_dhanu rashi_makara rashi_kumbha rashi_meena }
+}
+
+rashi_dhanu = {
+	name = trait_rashi_dhanu
+	icon = "rashi_dhanu.dds"
+	desc = trait_rashi_dhanu_desc
+	genetic = no
+	same_opinion = 10
+	ruler_designer_cost = 0
+	opposites = { rashi_mesha rashi_vrishabha rashi_mithuna rashi_karka rashi_simha rashi_kanya rashi_tula rashi_vrischika rashi_makara rashi_kumbha rashi_meena }
+}
+
+rashi_makara = {
+	name = trait_rashi_makara
+	icon = "rashi_makara.dds"
+	desc = trait_rashi_makara_desc
+	genetic = no
+	same_opinion = 10
+	ruler_designer_cost = 0
+	opposites = { rashi_mesha rashi_vrishabha rashi_mithuna rashi_karka rashi_simha rashi_kanya rashi_tula rashi_vrischika rashi_dhanu rashi_kumbha rashi_meena }
+}
+
+rashi_kumbha = {
+	name = trait_rashi_kumbha
+	icon = "rashi_kumbha.dds"
+	desc = trait_rashi_kumbha_desc
+	genetic = no
+	same_opinion = 10
+	ruler_designer_cost = 0
+	opposites = { rashi_mesha rashi_vrishabha rashi_mithuna rashi_karka rashi_simha rashi_kanya rashi_tula rashi_vrischika rashi_dhanu rashi_makara rashi_meena }
+}
+
+rashi_meena = {
+	name = trait_rashi_meena
+	icon = "rashi_meena.dds"
+	desc = trait_rashi_meena_desc
+	genetic = no
+	same_opinion = 10
+	ruler_designer_cost = 0
+	opposites = { rashi_mesha rashi_vrishabha rashi_mithuna rashi_karka rashi_simha rashi_kanya rashi_tula rashi_vrischika rashi_dhanu rashi_makara rashi_kumbha }
+}

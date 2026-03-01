@@ -1,0 +1,33 @@
+namespace = claw_debug
+
+# Debug: Show character's Rashi (Moon sign). Root = character.
+claw_debug.1 = {
+	type = character_event
+	title = claw_debug_event_rashi_title
+	desc = {
+		first_valid = {
+			triggered_desc = { trigger = { has_trait = rashi_mesha }    desc = trait_rashi_mesha }
+			triggered_desc = { trigger = { has_trait = rashi_vrishabha } desc = trait_rashi_vrishabha }
+			triggered_desc = { trigger = { has_trait = rashi_mithuna }   desc = trait_rashi_mithuna }
+			triggered_desc = { trigger = { has_trait = rashi_karka }    desc = trait_rashi_karka }
+			triggered_desc = { trigger = { has_trait = rashi_simha }    desc = trait_rashi_simha }
+			triggered_desc = { trigger = { has_trait = rashi_kanya }     desc = trait_rashi_kanya }
+			triggered_desc = { trigger = { has_trait = rashi_tula }      desc = trait_rashi_tula }
+			triggered_desc = { trigger = { has_trait = rashi_vrischika } desc = trait_rashi_vrischika }
+			triggered_desc = { trigger = { has_trait = rashi_dhanu }     desc = trait_rashi_dhanu }
+			triggered_desc = { trigger = { has_trait = rashi_makara }    desc = trait_rashi_makara }
+			triggered_desc = { trigger = { has_trait = rashi_kumbha }    desc = trait_rashi_kumbha }
+			triggered_desc = { trigger = { has_trait = rashi_meena }     desc = trait_rashi_meena }
+			desc = claw_debug_event_rashi_none
+		}
+	}
+	theme = learning
+
+	left_portrait = root
+
+	immediate = {}
+
+	option = {
+		name = claw_debug_event_rashi_ok
+	}
+}

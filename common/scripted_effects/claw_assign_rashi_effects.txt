@@ -1,0 +1,39 @@
+# Assign one random Rashi (Moon sign) trait to the character in scope.
+# Used at birth and at game start. Respects game rule and Religious Focus (Hindu).
+assign_random_rashi_effect = {
+	if = {
+		limit = {
+			NOT = {
+				OR = {
+					has_trait = rashi_mesha
+					has_trait = rashi_vrishabha
+					has_trait = rashi_mithuna
+					has_trait = rashi_karka
+					has_trait = rashi_simha
+					has_trait = rashi_kanya
+					has_trait = rashi_tula
+					has_trait = rashi_vrischika
+					has_trait = rashi_dhanu
+					has_trait = rashi_makara
+					has_trait = rashi_kumbha
+					has_trait = rashi_meena
+				}
+			}
+			cosmic_law_enabled_for_character = yes
+		}
+		random_list = {
+			1 = { add_trait = rashi_mesha }
+			1 = { add_trait = rashi_vrishabha }
+			1 = { add_trait = rashi_mithuna }
+			1 = { add_trait = rashi_karka }
+			1 = { add_trait = rashi_simha }
+			1 = { add_trait = rashi_kanya }
+			1 = { add_trait = rashi_tula }
+			1 = { add_trait = rashi_vrischika }
+			1 = { add_trait = rashi_dhanu }
+			1 = { add_trait = rashi_makara }
+			1 = { add_trait = rashi_kumbha }
+			1 = { add_trait = rashi_meena }
+		}
+	}
+}

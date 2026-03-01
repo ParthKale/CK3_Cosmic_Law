@@ -1,0 +1,45 @@
+l_english:
+  # Rashi (Moon sign) traits — Vedic astrology
+  trait_rashi_mesha:0 "Mesha Rashi (Aries)"
+  trait_rashi_mesha_desc:0 "This character's Moon sign (Janma Rashi) is Mesha, ruled by Mars. They are subject to planetary transits affecting Aries."
+
+  trait_rashi_vrishabha:0 "Vrishabha Rashi (Taurus)"
+  trait_rashi_vrishabha_desc:0 "This character's Moon sign is Vrishabha, ruled by Venus. They are subject to planetary transits affecting Taurus."
+
+  trait_rashi_mithuna:0 "Mithuna Rashi (Gemini)"
+  trait_rashi_mithuna_desc:0 "This character's Moon sign is Mithuna, ruled by Mercury. They are subject to planetary transits affecting Gemini."
+
+  trait_rashi_karka:0 "Karka Rashi (Cancer)"
+  trait_rashi_karka_desc:0 "This character's Moon sign is Karka, ruled by the Moon. They are subject to planetary transits affecting Cancer."
+
+  trait_rashi_simha:0 "Simha Rashi (Leo)"
+  trait_rashi_simha_desc:0 "This character's Moon sign is Simha, ruled by the Sun. They are subject to planetary transits affecting Leo."
+
+  trait_rashi_kanya:0 "Kanya Rashi (Virgo)"
+  trait_rashi_kanya_desc:0 "This character's Moon sign is Kanya, ruled by Mercury. They are subject to planetary transits affecting Virgo."
+
+  trait_rashi_tula:0 "Tula Rashi (Libra)"
+  trait_rashi_tula_desc:0 "This character's Moon sign is Tula, ruled by Venus. They are subject to planetary transits affecting Libra."
+
+  trait_rashi_vrischika:0 "Vrischika Rashi (Scorpio)"
+  trait_rashi_vrischika_desc:0 "This character's Moon sign is Vrischika, ruled by Mars. They are subject to planetary transits affecting Scorpio."
+
+  trait_rashi_dhanu:0 "Dhanu Rashi (Sagittarius)"
+  trait_rashi_dhanu_desc:0 "This character's Moon sign is Dhanu, ruled by Jupiter. They are subject to planetary transits affecting Sagittarius."
+
+  trait_rashi_makara:0 "Makara Rashi (Capricorn)"
+  trait_rashi_makara_desc:0 "This character's Moon sign is Makara, ruled by Saturn. They are subject to planetary transits affecting Capricorn."
+
+  trait_rashi_kumbha:0 "Kumbha Rashi (Aquarius)"
+  trait_rashi_kumbha_desc:0 "This character's Moon sign is Kumbha, ruled by Saturn. They are subject to planetary transits affecting Aquarius."
+
+  trait_rashi_meena:0 "Meena Rashi (Pisces)"
+  trait_rashi_meena_desc:0 "This character's Moon sign is Meena, ruled by Jupiter. They are subject to planetary transits affecting Pisces."
+
+  # Debug
+  claw_debug_decision_show_rashi:0 "Debug: Show my Rashi (Moon sign)"
+  claw_debug_decision_show_rashi_desc:0 "Only visible when Cosmic Law Debug game rule is On. Opens an event showing this character's assigned Rashi."
+  claw_debug_event_rashi_title:0 "Cosmic Law Debug — Rashi"
+  claw_debug_event_rashi_desc:0 "Your Moon sign (Janma Rashi) is shown below. Use this to verify that Rashi assignment is working."
+  claw_debug_event_rashi_none:0 "No Rashi assigned (Cosmic Law may be Disabled or character out of scope)."
+  claw_debug_event_rashi_ok:0 "Close"

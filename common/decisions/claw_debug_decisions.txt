@@ -1,0 +1,17 @@
+# Debug decision: only visible when Cosmic Law Debug game rule is On
+claw_debug_show_rashi_decision = {
+	ai_check_interval = 0
+	picture = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
+
+	is_shown = {
+		cosmic_law_debug_enabled = yes
+	}
+
+	is_valid = {
+		always = yes
+	}
+
+	effect = {
+		trigger_event = { id = claw_debug.1 }
+	}
+}
