@@ -1,0 +1,28 @@
+# Apply or refresh planet–Rashi modifiers for the character in scope.
+# Runs on yearly pulse. For now: add cosmic_planet_awareness to everyone in scope with a Rashi (duration 1 year).
+# Future: compute friend/enemy from planet positions and apply favorable/unfavorable.
+claw_apply_planet_rashi_modifier_effect = {
+	if = {
+		limit = {
+			cosmic_law_enabled_for_character = yes
+			OR = {
+				has_trait = rashi_mesha
+				has_trait = rashi_vrishabha
+				has_trait = rashi_mithuna
+				has_trait = rashi_karka
+				has_trait = rashi_simha
+				has_trait = rashi_kanya
+				has_trait = rashi_tula
+				has_trait = rashi_vrischika
+				has_trait = rashi_dhanu
+				has_trait = rashi_makara
+				has_trait = rashi_kumbha
+				has_trait = rashi_meena
+			}
+		}
+		add_character_modifier = {
+			modifier = claw_cosmic_planet_awareness
+			years = 1
+		}
+	}
+}

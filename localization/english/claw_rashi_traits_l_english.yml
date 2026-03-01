@@ -47,3 +47,8 @@ l_english:
   claw_debug_show_planets_decision_desc:0 "Only when Debug is On. Shows current Navagraha positions (Rashi 1-12)."
   claw_debug_event_planets_title:0 "Cosmic Law Debug — Planets"
   claw_debug_event_planets_desc:0 "Planet transits run every quarter (day-based). Positions: Surya, Chandra, Mangal, Budh, Guru, Shukra, Shani, Rahu, Ketu — each in Rashi 1-12. Reload and advance time to see changes."
+  claw_debug_show_modifier_decision:0 "Debug: Show my cosmic modifier"
+  claw_debug_show_modifier_decision_desc:0 "Only when Debug is On. Shows if you have the planet–Rashi modifier."
+  claw_debug_event_modifier_title:0 "Cosmic Law Debug — Modifier"
+  claw_debug_event_modifier_has:0 "You have the modifier 'Cosmic Planet Awareness'. Planet–Rashi interaction is active."
+  claw_debug_event_modifier_none:0 "You do not have the cosmic modifier. (Cosmic Law may be Off, or you have no Rashi, or the yearly pulse has not run yet.)"

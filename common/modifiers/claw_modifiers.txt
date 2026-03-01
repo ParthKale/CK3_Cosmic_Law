@@ -1,0 +1,14 @@
+# Cosmic Law: planet–Rashi interaction modifiers (extensible for Mitra/Shatru later)
+claw_cosmic_planet_awareness = {
+	monthly_piety = 0.05
+	learning = 1
+}
+claw_cosmic_planet_favorable = {
+	monthly_piety = 0.1
+	learning = 2
+	diplomacy = 1
+}
+claw_cosmic_planet_unfavorable = {
+	monthly_piety = -0.05
+	learning = -1
+}

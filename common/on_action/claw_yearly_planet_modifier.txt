@@ -1,0 +1,10 @@
+# Refresh planet–Rashi modifier for the character (root) once per year.
+on_yearly_playable = {
+	on_actions = { claw_yearly_planet_modifier }
+}
+
+claw_yearly_planet_modifier = {
+	effect = {
+		claw_apply_planet_rashi_modifier_effect = yes
+	}
+}

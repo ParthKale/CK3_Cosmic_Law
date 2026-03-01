@@ -42,3 +42,22 @@ claw_debug.2 = {
 	immediate = {}
 	option = { name = claw_debug_event_rashi_ok }
 }
+
+# Debug: Show whether character has Cosmic Law modifier. Root = character.
+claw_debug.3 = {
+	type = character_event
+	title = claw_debug_event_modifier_title
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { has_character_modifier = claw_cosmic_planet_awareness }
+				desc = claw_debug_event_modifier_has
+			}
+			desc = claw_debug_event_modifier_none
+		}
+	}
+	theme = learning
+	left_portrait = root
+	immediate = {}
+	option = { name = claw_debug_event_rashi_ok }
+}
