@@ -217,7 +217,7 @@ All of the above can be added without reworking the core: same global planet sta
 
 ## 15. Suggested Additional Features
 
-- **Rashi compatibility in marriage (to implement):** Opinion or acceptance modifier when bride/groom have compatible Rashis (e.g. same element or Mitra signs). Included in scope.
+- **Rashi compatibility in marriage:** Spouse opinion (Mitra/Shatru/same Rashi) is applied yearly for married couples when Cosmic Law is enabled. To affect **marriage acceptance** (AI willingness to accept a proposal), the game’s `marriage_ai_accept_modifier` would need to be overridden in full and a modifier block added that uses scripted triggers `claw_scope_has_mitra_rashi_to_root` (add acceptance) and `claw_scope_has_shatru_rashi_to_root` (subtract acceptance) with `scope:secondary_actor` and `scope:secondary_recipient` as the couple; the mod does not override that file by default.
 - **Astrology council task:** “Consult the stars” giving a temporary bonus or event based on current transits.
 - **Festival/ritual events** on “auspicious” planetary combinations (e.g. Jupiter in exaltation).
 - **Nicknames or titles** tied to Sade Sati or strong planetary influence (e.g. “Shani’s child” after Sade Sati).
@@ -234,9 +234,10 @@ All of the above can be added without reworking the core: same global planet sta
 | 2 | `traits-rashi` | 12 Rashi traits (definition, localization, icons); on_birth + on_startup assignment (random); respect game rule and Religious Focus. |
 | 3 | `planets-navagraha` | Planet position storage (flags/variables); on_startup init (random); one yearly event to advance transits (single speed); no character effects yet. |
 | 4 | `planet-rashi-interactions` | Rashi lord + Mitra/Shatru data; scripted effects to compute relation and apply one combined modifier per character; hook into yearly pulse; optional low-weight flavor events. |
-| 5 | `kundali-view` | **Initial:** Character view only (e.g. decision “View my Kundali” + event, or panel in character window). Later: optional custom .gui and Mod Option to show/hide. |
-| 6 | `sade-sati` | Sade Sati phase detection (Saturn 12th/1st/2nd from Moon Rashi); 3 modifiers + 3 phase events; stress/recovery effects; time-based. |
-| 7 | `polish-localization` | Full localization pass; balance numbers; Rashi compatibility in marriage (opinion/acceptance modifier); doc/README update. |
+| 5 | `rashi-relationships` | Mitra/Shatru triggers; Rashi lord (planet in own sign); Rashi compatibility opinion (spouse yearly); marriage spouse opinion; marriage acceptance override doc. |
+| 6 | `kundali-view` | **Initial:** Character view only (e.g. decision “View my Kundali” + event, or panel in character window). Later: optional custom .gui and Mod Option to show/hide. |
+| 7 | `sade-sati` | Sade Sati phase detection (Saturn 12th/1st/2nd from Moon Rashi); 3 modifiers + 3 phase events; stress/recovery effects; time-based. |
+| 8 | `polish-localization` | Full localization pass; balance numbers; Rashi compatibility in marriage (opinion/acceptance modifier); doc/README update. |
 
 ---
 

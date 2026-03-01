@@ -6,8 +6,10 @@
 2. **traits-rashi** — 12 Rashi traits, birth/game-start assignment, debug Rashi decision.
 3. **planets-navagraha** — Planet variables, game-start init, day-based transit, debug planets decision.
 4. **planet-rashi-interactions** — Modifiers, yearly refresh, debug modifier decision.
+5. **rashi-relationships** — Mitra/Shatru triggers, Rashi lord (planet in own sign), Rashi compatibility opinion (spouse yearly), marriage compatibility (spouse opinion; acceptance requires override — see IMPLEMENTATION_PLAN).
+6. **sade-sati** (separate) — Sade Sati phase detection and events.
 
-Create PRs from each branch into `main` and merge in order 1 → 2 → 3 → 4.
+Create PRs from each branch into `main` and merge in order 1 → 2 → 3 → 4 → 5 (then 6).
 
 ## In-game debugging
 

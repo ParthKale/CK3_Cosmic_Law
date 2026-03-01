@@ -1,6 +1,6 @@
 # Apply or refresh planet–Rashi modifiers for the character in scope.
-# Runs on yearly pulse. For now: add cosmic_planet_awareness to everyone in scope with a Rashi (duration 1 year).
-# Future: compute friend/enemy from planet positions and apply favorable/unfavorable.
+# Runs on yearly pulse. Adds awareness; if any planet is in own Rashi (Rashi lord) adds favorable.
+# Rashi lord mapping: Mesha→Mangal, Vrishabha→Shukra, Mithuna/Kanya→Budh, Karka→Chandra, Simha→Surya, Tula→Shukra, Vrischika→Mangal, Dhanu/Meena→Guru, Makara/Kumbha→Shani.
 claw_apply_planet_rashi_modifier_effect = {
 	if = {
 		limit = {
@@ -23,6 +23,13 @@ claw_apply_planet_rashi_modifier_effect = {
 		add_character_modifier = {
 			modifier = claw_cosmic_planet_awareness
 			years = 1
+		}
+		if = {
+			limit = { claw_any_planet_in_own_rashi = yes }
+			add_character_modifier = {
+				modifier = claw_cosmic_planet_favorable
+				years = 1
+			}
 		}
 	}
 }
