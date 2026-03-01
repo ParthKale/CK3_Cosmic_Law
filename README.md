@@ -1,2 +1,2 @@
-# CK3_Consmic_Law
+# CK3_Cosmic_Law
 A Crusader Kings III Mod based on Vedic Astrology.
