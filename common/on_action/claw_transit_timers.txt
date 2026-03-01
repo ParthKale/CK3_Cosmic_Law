@@ -1,9 +1,21 @@
 # Hook into quarterly pulse to advance planet positions (day-based transit).
-on_quarterly_playable_pulse = {
+# Game fires "quarterly_playable_pulse" (no "on_" prefix); use that name so we're merged into the pulse.
+quarterly_playable_pulse = {
 	on_actions = { claw_quarterly_transit_tick }
 }
 
+# Run once per (year, quarter): only when this quarter's "ran" global is not set.
+# When paused, the pulse can fire repeatedly with the same scope:quarter; we skip those. Each quarter (1–4) runs once per year.
 claw_quarterly_transit_tick = {
+	trigger = {
+		is_ai = no
+		OR = {
+			AND = { scope:quarter = 1 NOT = { has_global_variable = claw_transit_ran_q1 } }
+			AND = { scope:quarter = 2 NOT = { has_global_variable = claw_transit_ran_q2 } }
+			AND = { scope:quarter = 3 NOT = { has_global_variable = claw_transit_ran_q3 } }
+			AND = { scope:quarter = 4 NOT = { has_global_variable = claw_transit_ran_q4 } }
+		}
+	}
 	effect = {
 		cosmic_law_quarterly_transit_tick = yes
 	}

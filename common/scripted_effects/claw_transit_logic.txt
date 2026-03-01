@@ -21,6 +21,11 @@ cosmic_law_quarterly_transit_tick = {
 		claw_advance_shani_tick = yes
 		claw_advance_rahu_tick = yes
 		claw_advance_ketu_tick = yes
+		# Mark this quarter as run for this year (1-year duration); prevents repeat when pulse fires again e.g. while paused
+		if = { limit = { scope:quarter = 1 } set_global_variable = { name = claw_transit_ran_q1 value = yes years = 1 } }
+		if = { limit = { scope:quarter = 2 } set_global_variable = { name = claw_transit_ran_q2 value = yes years = 1 } }
+		if = { limit = { scope:quarter = 3 } set_global_variable = { name = claw_transit_ran_q3 value = yes years = 1 } }
+		if = { limit = { scope:quarter = 4 } set_global_variable = { name = claw_transit_ran_q4 value = yes years = 1 } }
 	}
 }
 

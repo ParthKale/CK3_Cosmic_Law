@@ -1,156 +1,741 @@
-# Debug toasts: "X planet moved to Y Rashi". Only when Cosmic Law Debug is On.
-# Called after a planet advances; shows one toast per advance to each player.
+# "X planet moved to Y Rashi" toasts. Only when Cosmic Law Debug is On.
+# When a planet transits into the player's Rashi: friendly planet → good toast + good music; enemy planet → bad toast + suspense music.
+# Friendly (natural benefics): Chandra, Budh, Guru, Shukra. Enemy (natural malefics): Mangal, Shani, Rahu, Ketu. Neutral: Surya.
 
 claw_debug_toast_surya = {
 	if = {
 		limit = { cosmic_law_debug_enabled = yes }
-		if = { limit = { global_var:global_surya_rashi == 1 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_surya_1 } } }
-		if = { limit = { global_var:global_surya_rashi == 2 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_surya_2 } } }
-		if = { limit = { global_var:global_surya_rashi == 3 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_surya_3 } } }
-		if = { limit = { global_var:global_surya_rashi == 4 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_surya_4 } } }
-		if = { limit = { global_var:global_surya_rashi == 5 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_surya_5 } } }
-		if = { limit = { global_var:global_surya_rashi == 6 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_surya_6 } } }
-		if = { limit = { global_var:global_surya_rashi == 7 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_surya_7 } } }
-		if = { limit = { global_var:global_surya_rashi == 8 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_surya_8 } } }
-		if = { limit = { global_var:global_surya_rashi == 9 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_surya_9 } } }
-		if = { limit = { global_var:global_surya_rashi == 10 } every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_surya_10 } } }
-		if = { limit = { global_var:global_surya_rashi == 11 } every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_surya_11 } } }
-		if = { limit = { global_var:global_surya_rashi == 12 } every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_surya_12 } } }
+		if = { limit = { global_var:global_surya_rashi == 1 }  send_interface_message = { type = event_toast_effect_neutral title = claw_transit_surya_1 left_icon = root } }
+		if = { limit = { global_var:global_surya_rashi == 2 }  send_interface_message = { type = event_toast_effect_neutral title = claw_transit_surya_2 left_icon = root } }
+		if = { limit = { global_var:global_surya_rashi == 3 }  send_interface_message = { type = event_toast_effect_neutral title = claw_transit_surya_3 left_icon = root } }
+		if = { limit = { global_var:global_surya_rashi == 4 }  send_interface_message = { type = event_toast_effect_neutral title = claw_transit_surya_4 left_icon = root } }
+		if = { limit = { global_var:global_surya_rashi == 5 }  send_interface_message = { type = event_toast_effect_neutral title = claw_transit_surya_5 left_icon = root } }
+		if = { limit = { global_var:global_surya_rashi == 6 }  send_interface_message = { type = event_toast_effect_neutral title = claw_transit_surya_6 left_icon = root } }
+		if = { limit = { global_var:global_surya_rashi == 7 }  send_interface_message = { type = event_toast_effect_neutral title = claw_transit_surya_7 left_icon = root } }
+		if = { limit = { global_var:global_surya_rashi == 8 }  send_interface_message = { type = event_toast_effect_neutral title = claw_transit_surya_8 left_icon = root } }
+		if = { limit = { global_var:global_surya_rashi == 9 }  send_interface_message = { type = event_toast_effect_neutral title = claw_transit_surya_9 left_icon = root } }
+		if = { limit = { global_var:global_surya_rashi == 10 } send_interface_message = { type = event_toast_effect_neutral title = claw_transit_surya_10 left_icon = root } }
+		if = { limit = { global_var:global_surya_rashi == 11 } send_interface_message = { type = event_toast_effect_neutral title = claw_transit_surya_11 left_icon = root } }
+		if = { limit = { global_var:global_surya_rashi == 12 } send_interface_message = { type = event_toast_effect_neutral title = claw_transit_surya_12 left_icon = root } }
 	}
 }
+
 claw_debug_toast_chandra = {
 	if = {
 		limit = { cosmic_law_debug_enabled = yes }
-		if = { limit = { global_var:global_chandra_rashi == 1 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_chandra_1 } } }
-		if = { limit = { global_var:global_chandra_rashi == 2 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_chandra_2 } } }
-		if = { limit = { global_var:global_chandra_rashi == 3 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_chandra_3 } } }
-		if = { limit = { global_var:global_chandra_rashi == 4 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_chandra_4 } } }
-		if = { limit = { global_var:global_chandra_rashi == 5 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_chandra_5 } } }
-		if = { limit = { global_var:global_chandra_rashi == 6 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_chandra_6 } } }
-		if = { limit = { global_var:global_chandra_rashi == 7 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_chandra_7 } } }
-		if = { limit = { global_var:global_chandra_rashi == 8 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_chandra_8 } } }
-		if = { limit = { global_var:global_chandra_rashi == 9 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_chandra_9 } } }
-		if = { limit = { global_var:global_chandra_rashi == 10 } every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_chandra_10 } } }
-		if = { limit = { global_var:global_chandra_rashi == 11 } every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_chandra_11 } } }
-		if = { limit = { global_var:global_chandra_rashi == 12 } every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_chandra_12 } } }
+		if = { limit = { global_var:global_chandra_rashi == 1 }
+			if = { limit = { has_trait = rashi_mesha }
+				send_interface_message = { type = event_toast_effect_good title = claw_transit_chandra_1 left_icon = root }
+				play_music_cue = mx_cue_positive_effect
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_chandra_1 left_icon = root } }
+		}
+		if = { limit = { global_var:global_chandra_rashi == 2 }
+			if = { limit = { has_trait = rashi_vrishabha }
+				send_interface_message = { type = event_toast_effect_good title = claw_transit_chandra_2 left_icon = root }
+				play_music_cue = mx_cue_positive_effect
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_chandra_2 left_icon = root } }
+		}
+		if = { limit = { global_var:global_chandra_rashi == 3 }
+			if = { limit = { has_trait = rashi_mithuna }
+				send_interface_message = { type = event_toast_effect_good title = claw_transit_chandra_3 left_icon = root }
+				play_music_cue = mx_cue_positive_effect
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_chandra_3 left_icon = root } }
+		}
+		if = { limit = { global_var:global_chandra_rashi == 4 }
+			if = { limit = { has_trait = rashi_karka }
+				send_interface_message = { type = event_toast_effect_good title = claw_transit_chandra_4 left_icon = root }
+				play_music_cue = mx_cue_positive_effect
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_chandra_4 left_icon = root } }
+		}
+		if = { limit = { global_var:global_chandra_rashi == 5 }
+			if = { limit = { has_trait = rashi_simha }
+				send_interface_message = { type = event_toast_effect_good title = claw_transit_chandra_5 left_icon = root }
+				play_music_cue = mx_cue_positive_effect
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_chandra_5 left_icon = root } }
+		}
+		if = { limit = { global_var:global_chandra_rashi == 6 }
+			if = { limit = { has_trait = rashi_kanya }
+				send_interface_message = { type = event_toast_effect_good title = claw_transit_chandra_6 left_icon = root }
+				play_music_cue = mx_cue_positive_effect
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_chandra_6 left_icon = root } }
+		}
+		if = { limit = { global_var:global_chandra_rashi == 7 }
+			if = { limit = { has_trait = rashi_tula }
+				send_interface_message = { type = event_toast_effect_good title = claw_transit_chandra_7 left_icon = root }
+				play_music_cue = mx_cue_positive_effect
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_chandra_7 left_icon = root } }
+		}
+		if = { limit = { global_var:global_chandra_rashi == 8 }
+			if = { limit = { has_trait = rashi_vrischika }
+				send_interface_message = { type = event_toast_effect_good title = claw_transit_chandra_8 left_icon = root }
+				play_music_cue = mx_cue_positive_effect
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_chandra_8 left_icon = root } }
+		}
+		if = { limit = { global_var:global_chandra_rashi == 9 }
+			if = { limit = { has_trait = rashi_dhanu }
+				send_interface_message = { type = event_toast_effect_good title = claw_transit_chandra_9 left_icon = root }
+				play_music_cue = mx_cue_positive_effect
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_chandra_9 left_icon = root } }
+		}
+		if = { limit = { global_var:global_chandra_rashi == 10 }
+			if = { limit = { has_trait = rashi_makara }
+				send_interface_message = { type = event_toast_effect_good title = claw_transit_chandra_10 left_icon = root }
+				play_music_cue = mx_cue_positive_effect
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_chandra_10 left_icon = root } }
+		}
+		if = { limit = { global_var:global_chandra_rashi == 11 }
+			if = { limit = { has_trait = rashi_kumbha }
+				send_interface_message = { type = event_toast_effect_good title = claw_transit_chandra_11 left_icon = root }
+				play_music_cue = mx_cue_positive_effect
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_chandra_11 left_icon = root } }
+		}
+		if = { limit = { global_var:global_chandra_rashi == 12 }
+			if = { limit = { has_trait = rashi_meena }
+				send_interface_message = { type = event_toast_effect_good title = claw_transit_chandra_12 left_icon = root }
+				play_music_cue = mx_cue_positive_effect
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_chandra_12 left_icon = root } }
+		}
 	}
 }
+
 claw_debug_toast_mangal = {
 	if = {
 		limit = { cosmic_law_debug_enabled = yes }
-		if = { limit = { global_var:global_mangal_rashi == 1 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_mangal_1 } } }
-		if = { limit = { global_var:global_mangal_rashi == 2 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_mangal_2 } } }
-		if = { limit = { global_var:global_mangal_rashi == 3 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_mangal_3 } } }
-		if = { limit = { global_var:global_mangal_rashi == 4 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_mangal_4 } } }
-		if = { limit = { global_var:global_mangal_rashi == 5 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_mangal_5 } } }
-		if = { limit = { global_var:global_mangal_rashi == 6 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_mangal_6 } } }
-		if = { limit = { global_var:global_mangal_rashi == 7 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_mangal_7 } } }
-		if = { limit = { global_var:global_mangal_rashi == 8 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_mangal_8 } } }
-		if = { limit = { global_var:global_mangal_rashi == 9 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_mangal_9 } } }
-		if = { limit = { global_var:global_mangal_rashi == 10 } every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_mangal_10 } } }
-		if = { limit = { global_var:global_mangal_rashi == 11 } every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_mangal_11 } } }
-		if = { limit = { global_var:global_mangal_rashi == 12 } every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_mangal_12 } } }
+		if = { limit = { global_var:global_mangal_rashi == 1 }
+			if = { limit = { has_trait = rashi_mesha }
+				send_interface_message = { type = event_toast_effect_bad title = claw_transit_mangal_1 left_icon = root }
+				play_music_cue = mx_cue_negative
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_mangal_1 left_icon = root } }
+		}
+		if = { limit = { global_var:global_mangal_rashi == 2 }
+			if = { limit = { has_trait = rashi_vrishabha }
+				send_interface_message = { type = event_toast_effect_bad title = claw_transit_mangal_2 left_icon = root }
+				play_music_cue = mx_cue_negative
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_mangal_2 left_icon = root } }
+		}
+		if = { limit = { global_var:global_mangal_rashi == 3 }
+			if = { limit = { has_trait = rashi_mithuna }
+				send_interface_message = { type = event_toast_effect_bad title = claw_transit_mangal_3 left_icon = root }
+				play_music_cue = mx_cue_negative
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_mangal_3 left_icon = root } }
+		}
+		if = { limit = { global_var:global_mangal_rashi == 4 }
+			if = { limit = { has_trait = rashi_karka }
+				send_interface_message = { type = event_toast_effect_bad title = claw_transit_mangal_4 left_icon = root }
+				play_music_cue = mx_cue_negative
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_mangal_4 left_icon = root } }
+		}
+		if = { limit = { global_var:global_mangal_rashi == 5 }
+			if = { limit = { has_trait = rashi_simha }
+				send_interface_message = { type = event_toast_effect_bad title = claw_transit_mangal_5 left_icon = root }
+				play_music_cue = mx_cue_negative
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_mangal_5 left_icon = root } }
+		}
+		if = { limit = { global_var:global_mangal_rashi == 6 }
+			if = { limit = { has_trait = rashi_kanya }
+				send_interface_message = { type = event_toast_effect_bad title = claw_transit_mangal_6 left_icon = root }
+				play_music_cue = mx_cue_negative
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_mangal_6 left_icon = root } }
+		}
+		if = { limit = { global_var:global_mangal_rashi == 7 }
+			if = { limit = { has_trait = rashi_tula }
+				send_interface_message = { type = event_toast_effect_bad title = claw_transit_mangal_7 left_icon = root }
+				play_music_cue = mx_cue_negative
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_mangal_7 left_icon = root } }
+		}
+		if = { limit = { global_var:global_mangal_rashi == 8 }
+			if = { limit = { has_trait = rashi_vrischika }
+				send_interface_message = { type = event_toast_effect_bad title = claw_transit_mangal_8 left_icon = root }
+				play_music_cue = mx_cue_negative
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_mangal_8 left_icon = root } }
+		}
+		if = { limit = { global_var:global_mangal_rashi == 9 }
+			if = { limit = { has_trait = rashi_dhanu }
+				send_interface_message = { type = event_toast_effect_bad title = claw_transit_mangal_9 left_icon = root }
+				play_music_cue = mx_cue_negative
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_mangal_9 left_icon = root } }
+		}
+		if = { limit = { global_var:global_mangal_rashi == 10 }
+			if = { limit = { has_trait = rashi_makara }
+				send_interface_message = { type = event_toast_effect_bad title = claw_transit_mangal_10 left_icon = root }
+				play_music_cue = mx_cue_negative
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_mangal_10 left_icon = root } }
+		}
+		if = { limit = { global_var:global_mangal_rashi == 11 }
+			if = { limit = { has_trait = rashi_kumbha }
+				send_interface_message = { type = event_toast_effect_bad title = claw_transit_mangal_11 left_icon = root }
+				play_music_cue = mx_cue_negative
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_mangal_11 left_icon = root } }
+		}
+		if = { limit = { global_var:global_mangal_rashi == 12 }
+			if = { limit = { has_trait = rashi_meena }
+				send_interface_message = { type = event_toast_effect_bad title = claw_transit_mangal_12 left_icon = root }
+				play_music_cue = mx_cue_negative
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_mangal_12 left_icon = root } }
+		}
 	}
 }
+
 claw_debug_toast_budh = {
 	if = {
 		limit = { cosmic_law_debug_enabled = yes }
-		if = { limit = { global_var:global_budh_rashi == 1 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_budh_1 } } }
-		if = { limit = { global_var:global_budh_rashi == 2 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_budh_2 } } }
-		if = { limit = { global_var:global_budh_rashi == 3 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_budh_3 } } }
-		if = { limit = { global_var:global_budh_rashi == 4 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_budh_4 } } }
-		if = { limit = { global_var:global_budh_rashi == 5 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_budh_5 } } }
-		if = { limit = { global_var:global_budh_rashi == 6 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_budh_6 } } }
-		if = { limit = { global_var:global_budh_rashi == 7 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_budh_7 } } }
-		if = { limit = { global_var:global_budh_rashi == 8 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_budh_8 } } }
-		if = { limit = { global_var:global_budh_rashi == 9 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_budh_9 } } }
-		if = { limit = { global_var:global_budh_rashi == 10 } every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_budh_10 } } }
-		if = { limit = { global_var:global_budh_rashi == 11 } every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_budh_11 } } }
-		if = { limit = { global_var:global_budh_rashi == 12 } every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_budh_12 } } }
+		if = { limit = { global_var:global_budh_rashi == 1 }
+			if = { limit = { has_trait = rashi_mesha }
+				send_interface_message = { type = event_toast_effect_good title = claw_transit_budh_1 left_icon = root }
+				play_music_cue = mx_cue_positive_effect
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_budh_1 left_icon = root } }
+		}
+		if = { limit = { global_var:global_budh_rashi == 2 }
+			if = { limit = { has_trait = rashi_vrishabha }
+				send_interface_message = { type = event_toast_effect_good title = claw_transit_budh_2 left_icon = root }
+				play_music_cue = mx_cue_positive_effect
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_budh_2 left_icon = root } }
+		}
+		if = { limit = { global_var:global_budh_rashi == 3 }
+			if = { limit = { has_trait = rashi_mithuna }
+				send_interface_message = { type = event_toast_effect_good title = claw_transit_budh_3 left_icon = root }
+				play_music_cue = mx_cue_positive_effect
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_budh_3 left_icon = root } }
+		}
+		if = { limit = { global_var:global_budh_rashi == 4 }
+			if = { limit = { has_trait = rashi_karka }
+				send_interface_message = { type = event_toast_effect_good title = claw_transit_budh_4 left_icon = root }
+				play_music_cue = mx_cue_positive_effect
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_budh_4 left_icon = root } }
+		}
+		if = { limit = { global_var:global_budh_rashi == 5 }
+			if = { limit = { has_trait = rashi_simha }
+				send_interface_message = { type = event_toast_effect_good title = claw_transit_budh_5 left_icon = root }
+				play_music_cue = mx_cue_positive_effect
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_budh_5 left_icon = root } }
+		}
+		if = { limit = { global_var:global_budh_rashi == 6 }
+			if = { limit = { has_trait = rashi_kanya }
+				send_interface_message = { type = event_toast_effect_good title = claw_transit_budh_6 left_icon = root }
+				play_music_cue = mx_cue_positive_effect
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_budh_6 left_icon = root } }
+		}
+		if = { limit = { global_var:global_budh_rashi == 7 }
+			if = { limit = { has_trait = rashi_tula }
+				send_interface_message = { type = event_toast_effect_good title = claw_transit_budh_7 left_icon = root }
+				play_music_cue = mx_cue_positive_effect
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_budh_7 left_icon = root } }
+		}
+		if = { limit = { global_var:global_budh_rashi == 8 }
+			if = { limit = { has_trait = rashi_vrischika }
+				send_interface_message = { type = event_toast_effect_good title = claw_transit_budh_8 left_icon = root }
+				play_music_cue = mx_cue_positive_effect
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_budh_8 left_icon = root } }
+		}
+		if = { limit = { global_var:global_budh_rashi == 9 }
+			if = { limit = { has_trait = rashi_dhanu }
+				send_interface_message = { type = event_toast_effect_good title = claw_transit_budh_9 left_icon = root }
+				play_music_cue = mx_cue_positive_effect
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_budh_9 left_icon = root } }
+		}
+		if = { limit = { global_var:global_budh_rashi == 10 }
+			if = { limit = { has_trait = rashi_makara }
+				send_interface_message = { type = event_toast_effect_good title = claw_transit_budh_10 left_icon = root }
+				play_music_cue = mx_cue_positive_effect
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_budh_10 left_icon = root } }
+		}
+		if = { limit = { global_var:global_budh_rashi == 11 }
+			if = { limit = { has_trait = rashi_kumbha }
+				send_interface_message = { type = event_toast_effect_good title = claw_transit_budh_11 left_icon = root }
+				play_music_cue = mx_cue_positive_effect
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_budh_11 left_icon = root } }
+		}
+		if = { limit = { global_var:global_budh_rashi == 12 }
+			if = { limit = { has_trait = rashi_meena }
+				send_interface_message = { type = event_toast_effect_good title = claw_transit_budh_12 left_icon = root }
+				play_music_cue = mx_cue_positive_effect
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_budh_12 left_icon = root } }
+		}
 	}
 }
+
 claw_debug_toast_guru = {
 	if = {
 		limit = { cosmic_law_debug_enabled = yes }
-		if = { limit = { global_var:global_guru_rashi == 1 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_guru_1 } } }
-		if = { limit = { global_var:global_guru_rashi == 2 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_guru_2 } } }
-		if = { limit = { global_var:global_guru_rashi == 3 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_guru_3 } } }
-		if = { limit = { global_var:global_guru_rashi == 4 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_guru_4 } } }
-		if = { limit = { global_var:global_guru_rashi == 5 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_guru_5 } } }
-		if = { limit = { global_var:global_guru_rashi == 6 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_guru_6 } } }
-		if = { limit = { global_var:global_guru_rashi == 7 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_guru_7 } } }
-		if = { limit = { global_var:global_guru_rashi == 8 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_guru_8 } } }
-		if = { limit = { global_var:global_guru_rashi == 9 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_guru_9 } } }
-		if = { limit = { global_var:global_guru_rashi == 10 } every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_guru_10 } } }
-		if = { limit = { global_var:global_guru_rashi == 11 } every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_guru_11 } } }
-		if = { limit = { global_var:global_guru_rashi == 12 } every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_guru_12 } } }
+		if = { limit = { global_var:global_guru_rashi == 1 }
+			if = { limit = { has_trait = rashi_mesha }
+				send_interface_message = { type = event_toast_effect_good title = claw_transit_guru_1 left_icon = root }
+				play_music_cue = mx_cue_positive_effect
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_guru_1 left_icon = root } }
+		}
+		if = { limit = { global_var:global_guru_rashi == 2 }
+			if = { limit = { has_trait = rashi_vrishabha }
+				send_interface_message = { type = event_toast_effect_good title = claw_transit_guru_2 left_icon = root }
+				play_music_cue = mx_cue_positive_effect
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_guru_2 left_icon = root } }
+		}
+		if = { limit = { global_var:global_guru_rashi == 3 }
+			if = { limit = { has_trait = rashi_mithuna }
+				send_interface_message = { type = event_toast_effect_good title = claw_transit_guru_3 left_icon = root }
+				play_music_cue = mx_cue_positive_effect
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_guru_3 left_icon = root } }
+		}
+		if = { limit = { global_var:global_guru_rashi == 4 }
+			if = { limit = { has_trait = rashi_karka }
+				send_interface_message = { type = event_toast_effect_good title = claw_transit_guru_4 left_icon = root }
+				play_music_cue = mx_cue_positive_effect
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_guru_4 left_icon = root } }
+		}
+		if = { limit = { global_var:global_guru_rashi == 5 }
+			if = { limit = { has_trait = rashi_simha }
+				send_interface_message = { type = event_toast_effect_good title = claw_transit_guru_5 left_icon = root }
+				play_music_cue = mx_cue_positive_effect
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_guru_5 left_icon = root } }
+		}
+		if = { limit = { global_var:global_guru_rashi == 6 }
+			if = { limit = { has_trait = rashi_kanya }
+				send_interface_message = { type = event_toast_effect_good title = claw_transit_guru_6 left_icon = root }
+				play_music_cue = mx_cue_positive_effect
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_guru_6 left_icon = root } }
+		}
+		if = { limit = { global_var:global_guru_rashi == 7 }
+			if = { limit = { has_trait = rashi_tula }
+				send_interface_message = { type = event_toast_effect_good title = claw_transit_guru_7 left_icon = root }
+				play_music_cue = mx_cue_positive_effect
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_guru_7 left_icon = root } }
+		}
+		if = { limit = { global_var:global_guru_rashi == 8 }
+			if = { limit = { has_trait = rashi_vrischika }
+				send_interface_message = { type = event_toast_effect_good title = claw_transit_guru_8 left_icon = root }
+				play_music_cue = mx_cue_positive_effect
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_guru_8 left_icon = root } }
+		}
+		if = { limit = { global_var:global_guru_rashi == 9 }
+			if = { limit = { has_trait = rashi_dhanu }
+				send_interface_message = { type = event_toast_effect_good title = claw_transit_guru_9 left_icon = root }
+				play_music_cue = mx_cue_positive_effect
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_guru_9 left_icon = root } }
+		}
+		if = { limit = { global_var:global_guru_rashi == 10 }
+			if = { limit = { has_trait = rashi_makara }
+				send_interface_message = { type = event_toast_effect_good title = claw_transit_guru_10 left_icon = root }
+				play_music_cue = mx_cue_positive_effect
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_guru_10 left_icon = root } }
+		}
+		if = { limit = { global_var:global_guru_rashi == 11 }
+			if = { limit = { has_trait = rashi_kumbha }
+				send_interface_message = { type = event_toast_effect_good title = claw_transit_guru_11 left_icon = root }
+				play_music_cue = mx_cue_positive_effect
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_guru_11 left_icon = root } }
+		}
+		if = { limit = { global_var:global_guru_rashi == 12 }
+			if = { limit = { has_trait = rashi_meena }
+				send_interface_message = { type = event_toast_effect_good title = claw_transit_guru_12 left_icon = root }
+				play_music_cue = mx_cue_positive_effect
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_guru_12 left_icon = root } }
+		}
 	}
 }
+
 claw_debug_toast_shukra = {
 	if = {
 		limit = { cosmic_law_debug_enabled = yes }
-		if = { limit = { global_var:global_shukra_rashi == 1 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_shukra_1 } } }
-		if = { limit = { global_var:global_shukra_rashi == 2 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_shukra_2 } } }
-		if = { limit = { global_var:global_shukra_rashi == 3 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_shukra_3 } } }
-		if = { limit = { global_var:global_shukra_rashi == 4 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_shukra_4 } } }
-		if = { limit = { global_var:global_shukra_rashi == 5 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_shukra_5 } } }
-		if = { limit = { global_var:global_shukra_rashi == 6 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_shukra_6 } } }
-		if = { limit = { global_var:global_shukra_rashi == 7 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_shukra_7 } } }
-		if = { limit = { global_var:global_shukra_rashi == 8 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_shukra_8 } } }
-		if = { limit = { global_var:global_shukra_rashi == 9 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_shukra_9 } } }
-		if = { limit = { global_var:global_shukra_rashi == 10 } every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_shukra_10 } } }
-		if = { limit = { global_var:global_shukra_rashi == 11 } every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_shukra_11 } } }
-		if = { limit = { global_var:global_shukra_rashi == 12 } every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_shukra_12 } } }
+		if = { limit = { global_var:global_shukra_rashi == 1 }
+			if = { limit = { has_trait = rashi_mesha }
+				send_interface_message = { type = event_toast_effect_good title = claw_transit_shukra_1 left_icon = root }
+				play_music_cue = mx_cue_positive_effect
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_shukra_1 left_icon = root } }
+		}
+		if = { limit = { global_var:global_shukra_rashi == 2 }
+			if = { limit = { has_trait = rashi_vrishabha }
+				send_interface_message = { type = event_toast_effect_good title = claw_transit_shukra_2 left_icon = root }
+				play_music_cue = mx_cue_positive_effect
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_shukra_2 left_icon = root } }
+		}
+		if = { limit = { global_var:global_shukra_rashi == 3 }
+			if = { limit = { has_trait = rashi_mithuna }
+				send_interface_message = { type = event_toast_effect_good title = claw_transit_shukra_3 left_icon = root }
+				play_music_cue = mx_cue_positive_effect
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_shukra_3 left_icon = root } }
+		}
+		if = { limit = { global_var:global_shukra_rashi == 4 }
+			if = { limit = { has_trait = rashi_karka }
+				send_interface_message = { type = event_toast_effect_good title = claw_transit_shukra_4 left_icon = root }
+				play_music_cue = mx_cue_positive_effect
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_shukra_4 left_icon = root } }
+		}
+		if = { limit = { global_var:global_shukra_rashi == 5 }
+			if = { limit = { has_trait = rashi_simha }
+				send_interface_message = { type = event_toast_effect_good title = claw_transit_shukra_5 left_icon = root }
+				play_music_cue = mx_cue_positive_effect
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_shukra_5 left_icon = root } }
+		}
+		if = { limit = { global_var:global_shukra_rashi == 6 }
+			if = { limit = { has_trait = rashi_kanya }
+				send_interface_message = { type = event_toast_effect_good title = claw_transit_shukra_6 left_icon = root }
+				play_music_cue = mx_cue_positive_effect
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_shukra_6 left_icon = root } }
+		}
+		if = { limit = { global_var:global_shukra_rashi == 7 }
+			if = { limit = { has_trait = rashi_tula }
+				send_interface_message = { type = event_toast_effect_good title = claw_transit_shukra_7 left_icon = root }
+				play_music_cue = mx_cue_positive_effect
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_shukra_7 left_icon = root } }
+		}
+		if = { limit = { global_var:global_shukra_rashi == 8 }
+			if = { limit = { has_trait = rashi_vrischika }
+				send_interface_message = { type = event_toast_effect_good title = claw_transit_shukra_8 left_icon = root }
+				play_music_cue = mx_cue_positive_effect
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_shukra_8 left_icon = root } }
+		}
+		if = { limit = { global_var:global_shukra_rashi == 9 }
+			if = { limit = { has_trait = rashi_dhanu }
+				send_interface_message = { type = event_toast_effect_good title = claw_transit_shukra_9 left_icon = root }
+				play_music_cue = mx_cue_positive_effect
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_shukra_9 left_icon = root } }
+		}
+		if = { limit = { global_var:global_shukra_rashi == 10 }
+			if = { limit = { has_trait = rashi_makara }
+				send_interface_message = { type = event_toast_effect_good title = claw_transit_shukra_10 left_icon = root }
+				play_music_cue = mx_cue_positive_effect
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_shukra_10 left_icon = root } }
+		}
+		if = { limit = { global_var:global_shukra_rashi == 11 }
+			if = { limit = { has_trait = rashi_kumbha }
+				send_interface_message = { type = event_toast_effect_good title = claw_transit_shukra_11 left_icon = root }
+				play_music_cue = mx_cue_positive_effect
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_shukra_11 left_icon = root } }
+		}
+		if = { limit = { global_var:global_shukra_rashi == 12 }
+			if = { limit = { has_trait = rashi_meena }
+				send_interface_message = { type = event_toast_effect_good title = claw_transit_shukra_12 left_icon = root }
+				play_music_cue = mx_cue_positive_effect
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_shukra_12 left_icon = root } }
+		}
 	}
 }
+
 claw_debug_toast_shani = {
 	if = {
 		limit = { cosmic_law_debug_enabled = yes }
-		if = { limit = { global_var:global_shani_rashi == 1 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_shani_1 } } }
-		if = { limit = { global_var:global_shani_rashi == 2 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_shani_2 } } }
-		if = { limit = { global_var:global_shani_rashi == 3 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_shani_3 } } }
-		if = { limit = { global_var:global_shani_rashi == 4 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_shani_4 } } }
-		if = { limit = { global_var:global_shani_rashi == 5 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_shani_5 } } }
-		if = { limit = { global_var:global_shani_rashi == 6 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_shani_6 } } }
-		if = { limit = { global_var:global_shani_rashi == 7 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_shani_7 } } }
-		if = { limit = { global_var:global_shani_rashi == 8 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_shani_8 } } }
-		if = { limit = { global_var:global_shani_rashi == 9 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_shani_9 } } }
-		if = { limit = { global_var:global_shani_rashi == 10 } every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_shani_10 } } }
-		if = { limit = { global_var:global_shani_rashi == 11 } every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_shani_11 } } }
-		if = { limit = { global_var:global_shani_rashi == 12 } every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_shani_12 } } }
+		if = { limit = { global_var:global_shani_rashi == 1 }
+			if = { limit = { has_trait = rashi_mesha }
+				send_interface_message = { type = event_toast_effect_bad title = claw_transit_shani_1 left_icon = root }
+				play_music_cue = mx_cue_negative
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_shani_1 left_icon = root } }
+		}
+		if = { limit = { global_var:global_shani_rashi == 2 }
+			if = { limit = { has_trait = rashi_vrishabha }
+				send_interface_message = { type = event_toast_effect_bad title = claw_transit_shani_2 left_icon = root }
+				play_music_cue = mx_cue_negative
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_shani_2 left_icon = root } }
+		}
+		if = { limit = { global_var:global_shani_rashi == 3 }
+			if = { limit = { has_trait = rashi_mithuna }
+				send_interface_message = { type = event_toast_effect_bad title = claw_transit_shani_3 left_icon = root }
+				play_music_cue = mx_cue_negative
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_shani_3 left_icon = root } }
+		}
+		if = { limit = { global_var:global_shani_rashi == 4 }
+			if = { limit = { has_trait = rashi_karka }
+				send_interface_message = { type = event_toast_effect_bad title = claw_transit_shani_4 left_icon = root }
+				play_music_cue = mx_cue_negative
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_shani_4 left_icon = root } }
+		}
+		if = { limit = { global_var:global_shani_rashi == 5 }
+			if = { limit = { has_trait = rashi_simha }
+				send_interface_message = { type = event_toast_effect_bad title = claw_transit_shani_5 left_icon = root }
+				play_music_cue = mx_cue_negative
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_shani_5 left_icon = root } }
+		}
+		if = { limit = { global_var:global_shani_rashi == 6 }
+			if = { limit = { has_trait = rashi_kanya }
+				send_interface_message = { type = event_toast_effect_bad title = claw_transit_shani_6 left_icon = root }
+				play_music_cue = mx_cue_negative
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_shani_6 left_icon = root } }
+		}
+		if = { limit = { global_var:global_shani_rashi == 7 }
+			if = { limit = { has_trait = rashi_tula }
+				send_interface_message = { type = event_toast_effect_bad title = claw_transit_shani_7 left_icon = root }
+				play_music_cue = mx_cue_negative
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_shani_7 left_icon = root } }
+		}
+		if = { limit = { global_var:global_shani_rashi == 8 }
+			if = { limit = { has_trait = rashi_vrischika }
+				send_interface_message = { type = event_toast_effect_bad title = claw_transit_shani_8 left_icon = root }
+				play_music_cue = mx_cue_negative
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_shani_8 left_icon = root } }
+		}
+		if = { limit = { global_var:global_shani_rashi == 9 }
+			if = { limit = { has_trait = rashi_dhanu }
+				send_interface_message = { type = event_toast_effect_bad title = claw_transit_shani_9 left_icon = root }
+				play_music_cue = mx_cue_negative
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_shani_9 left_icon = root } }
+		}
+		if = { limit = { global_var:global_shani_rashi == 10 }
+			if = { limit = { has_trait = rashi_makara }
+				send_interface_message = { type = event_toast_effect_bad title = claw_transit_shani_10 left_icon = root }
+				play_music_cue = mx_cue_negative
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_shani_10 left_icon = root } }
+		}
+		if = { limit = { global_var:global_shani_rashi == 11 }
+			if = { limit = { has_trait = rashi_kumbha }
+				send_interface_message = { type = event_toast_effect_bad title = claw_transit_shani_11 left_icon = root }
+				play_music_cue = mx_cue_negative
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_shani_11 left_icon = root } }
+		}
+		if = { limit = { global_var:global_shani_rashi == 12 }
+			if = { limit = { has_trait = rashi_meena }
+				send_interface_message = { type = event_toast_effect_bad title = claw_transit_shani_12 left_icon = root }
+				play_music_cue = mx_cue_negative
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_shani_12 left_icon = root } }
+		}
 	}
 }
+
 claw_debug_toast_rahu = {
 	if = {
 		limit = { cosmic_law_debug_enabled = yes }
-		if = { limit = { global_var:global_rahu_rashi == 1 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_rahu_1 } } }
-		if = { limit = { global_var:global_rahu_rashi == 2 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_rahu_2 } } }
-		if = { limit = { global_var:global_rahu_rashi == 3 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_rahu_3 } } }
-		if = { limit = { global_var:global_rahu_rashi == 4 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_rahu_4 } } }
-		if = { limit = { global_var:global_rahu_rashi == 5 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_rahu_5 } } }
-		if = { limit = { global_var:global_rahu_rashi == 6 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_rahu_6 } } }
-		if = { limit = { global_var:global_rahu_rashi == 7 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_rahu_7 } } }
-		if = { limit = { global_var:global_rahu_rashi == 8 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_rahu_8 } } }
-		if = { limit = { global_var:global_rahu_rashi == 9 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_rahu_9 } } }
-		if = { limit = { global_var:global_rahu_rashi == 10 } every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_rahu_10 } } }
-		if = { limit = { global_var:global_rahu_rashi == 11 } every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_rahu_11 } } }
-		if = { limit = { global_var:global_rahu_rashi == 12 } every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_rahu_12 } } }
+		if = { limit = { global_var:global_rahu_rashi == 1 }
+			if = { limit = { has_trait = rashi_mesha }
+				send_interface_message = { type = event_toast_effect_bad title = claw_transit_rahu_1 left_icon = root }
+				play_music_cue = mx_cue_negative
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_rahu_1 left_icon = root } }
+		}
+		if = { limit = { global_var:global_rahu_rashi == 2 }
+			if = { limit = { has_trait = rashi_vrishabha }
+				send_interface_message = { type = event_toast_effect_bad title = claw_transit_rahu_2 left_icon = root }
+				play_music_cue = mx_cue_negative
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_rahu_2 left_icon = root } }
+		}
+		if = { limit = { global_var:global_rahu_rashi == 3 }
+			if = { limit = { has_trait = rashi_mithuna }
+				send_interface_message = { type = event_toast_effect_bad title = claw_transit_rahu_3 left_icon = root }
+				play_music_cue = mx_cue_negative
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_rahu_3 left_icon = root } }
+		}
+		if = { limit = { global_var:global_rahu_rashi == 4 }
+			if = { limit = { has_trait = rashi_karka }
+				send_interface_message = { type = event_toast_effect_bad title = claw_transit_rahu_4 left_icon = root }
+				play_music_cue = mx_cue_negative
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_rahu_4 left_icon = root } }
+		}
+		if = { limit = { global_var:global_rahu_rashi == 5 }
+			if = { limit = { has_trait = rashi_simha }
+				send_interface_message = { type = event_toast_effect_bad title = claw_transit_rahu_5 left_icon = root }
+				play_music_cue = mx_cue_negative
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_rahu_5 left_icon = root } }
+		}
+		if = { limit = { global_var:global_rahu_rashi == 6 }
+			if = { limit = { has_trait = rashi_kanya }
+				send_interface_message = { type = event_toast_effect_bad title = claw_transit_rahu_6 left_icon = root }
+				play_music_cue = mx_cue_negative
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_rahu_6 left_icon = root } }
+		}
+		if = { limit = { global_var:global_rahu_rashi == 7 }
+			if = { limit = { has_trait = rashi_tula }
+				send_interface_message = { type = event_toast_effect_bad title = claw_transit_rahu_7 left_icon = root }
+				play_music_cue = mx_cue_negative
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_rahu_7 left_icon = root } }
+		}
+		if = { limit = { global_var:global_rahu_rashi == 8 }
+			if = { limit = { has_trait = rashi_vrischika }
+				send_interface_message = { type = event_toast_effect_bad title = claw_transit_rahu_8 left_icon = root }
+				play_music_cue = mx_cue_negative
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_rahu_8 left_icon = root } }
+		}
+		if = { limit = { global_var:global_rahu_rashi == 9 }
+			if = { limit = { has_trait = rashi_dhanu }
+				send_interface_message = { type = event_toast_effect_bad title = claw_transit_rahu_9 left_icon = root }
+				play_music_cue = mx_cue_negative
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_rahu_9 left_icon = root } }
+		}
+		if = { limit = { global_var:global_rahu_rashi == 10 }
+			if = { limit = { has_trait = rashi_makara }
+				send_interface_message = { type = event_toast_effect_bad title = claw_transit_rahu_10 left_icon = root }
+				play_music_cue = mx_cue_negative
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_rahu_10 left_icon = root } }
+		}
+		if = { limit = { global_var:global_rahu_rashi == 11 }
+			if = { limit = { has_trait = rashi_kumbha }
+				send_interface_message = { type = event_toast_effect_bad title = claw_transit_rahu_11 left_icon = root }
+				play_music_cue = mx_cue_negative
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_rahu_11 left_icon = root } }
+		}
+		if = { limit = { global_var:global_rahu_rashi == 12 }
+			if = { limit = { has_trait = rashi_meena }
+				send_interface_message = { type = event_toast_effect_bad title = claw_transit_rahu_12 left_icon = root }
+				play_music_cue = mx_cue_negative
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_rahu_12 left_icon = root } }
+		}
 	}
 }
+
 claw_debug_toast_ketu = {
 	if = {
 		limit = { cosmic_law_debug_enabled = yes }
-		if = { limit = { global_var:global_ketu_rashi == 1 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_ketu_1 } } }
-		if = { limit = { global_var:global_ketu_rashi == 2 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_ketu_2 } } }
-		if = { limit = { global_var:global_ketu_rashi == 3 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_ketu_3 } } }
-		if = { limit = { global_var:global_ketu_rashi == 4 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_ketu_4 } } }
-		if = { limit = { global_var:global_ketu_rashi == 5 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_ketu_5 } } }
-		if = { limit = { global_var:global_ketu_rashi == 6 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_ketu_6 } } }
-		if = { limit = { global_var:global_ketu_rashi == 7 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_ketu_7 } } }
-		if = { limit = { global_var:global_ketu_rashi == 8 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_ketu_8 } } }
-		if = { limit = { global_var:global_ketu_rashi == 9 }  every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_ketu_9 } } }
-		if = { limit = { global_var:global_ketu_rashi == 10 } every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_ketu_10 } } }
-		if = { limit = { global_var:global_ketu_rashi == 11 } every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_ketu_11 } } }
-		if = { limit = { global_var:global_ketu_rashi == 12 } every_player = { send_interface_toast = { type = event_toast_effect_neutral title = claw_transit_ketu_12 } } }
+		if = { limit = { global_var:global_ketu_rashi == 1 }
+			if = { limit = { has_trait = rashi_mesha }
+				send_interface_message = { type = event_toast_effect_bad title = claw_transit_ketu_1 left_icon = root }
+				play_music_cue = mx_cue_negative
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_ketu_1 left_icon = root } }
+		}
+		if = { limit = { global_var:global_ketu_rashi == 2 }
+			if = { limit = { has_trait = rashi_vrishabha }
+				send_interface_message = { type = event_toast_effect_bad title = claw_transit_ketu_2 left_icon = root }
+				play_music_cue = mx_cue_negative
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_ketu_2 left_icon = root } }
+		}
+		if = { limit = { global_var:global_ketu_rashi == 3 }
+			if = { limit = { has_trait = rashi_mithuna }
+				send_interface_message = { type = event_toast_effect_bad title = claw_transit_ketu_3 left_icon = root }
+				play_music_cue = mx_cue_negative
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_ketu_3 left_icon = root } }
+		}
+		if = { limit = { global_var:global_ketu_rashi == 4 }
+			if = { limit = { has_trait = rashi_karka }
+				send_interface_message = { type = event_toast_effect_bad title = claw_transit_ketu_4 left_icon = root }
+				play_music_cue = mx_cue_negative
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_ketu_4 left_icon = root } }
+		}
+		if = { limit = { global_var:global_ketu_rashi == 5 }
+			if = { limit = { has_trait = rashi_simha }
+				send_interface_message = { type = event_toast_effect_bad title = claw_transit_ketu_5 left_icon = root }
+				play_music_cue = mx_cue_negative
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_ketu_5 left_icon = root } }
+		}
+		if = { limit = { global_var:global_ketu_rashi == 6 }
+			if = { limit = { has_trait = rashi_kanya }
+				send_interface_message = { type = event_toast_effect_bad title = claw_transit_ketu_6 left_icon = root }
+				play_music_cue = mx_cue_negative
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_ketu_6 left_icon = root } }
+		}
+		if = { limit = { global_var:global_ketu_rashi == 7 }
+			if = { limit = { has_trait = rashi_tula }
+				send_interface_message = { type = event_toast_effect_bad title = claw_transit_ketu_7 left_icon = root }
+				play_music_cue = mx_cue_negative
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_ketu_7 left_icon = root } }
+		}
+		if = { limit = { global_var:global_ketu_rashi == 8 }
+			if = { limit = { has_trait = rashi_vrischika }
+				send_interface_message = { type = event_toast_effect_bad title = claw_transit_ketu_8 left_icon = root }
+				play_music_cue = mx_cue_negative
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_ketu_8 left_icon = root } }
+		}
+		if = { limit = { global_var:global_ketu_rashi == 9 }
+			if = { limit = { has_trait = rashi_dhanu }
+				send_interface_message = { type = event_toast_effect_bad title = claw_transit_ketu_9 left_icon = root }
+				play_music_cue = mx_cue_negative
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_ketu_9 left_icon = root } }
+		}
+		if = { limit = { global_var:global_ketu_rashi == 10 }
+			if = { limit = { has_trait = rashi_makara }
+				send_interface_message = { type = event_toast_effect_bad title = claw_transit_ketu_10 left_icon = root }
+				play_music_cue = mx_cue_negative
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_ketu_10 left_icon = root } }
+		}
+		if = { limit = { global_var:global_ketu_rashi == 11 }
+			if = { limit = { has_trait = rashi_kumbha }
+				send_interface_message = { type = event_toast_effect_bad title = claw_transit_ketu_11 left_icon = root }
+				play_music_cue = mx_cue_negative
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_ketu_11 left_icon = root } }
+		}
+		if = { limit = { global_var:global_ketu_rashi == 12 }
+			if = { limit = { has_trait = rashi_meena }
+				send_interface_message = { type = event_toast_effect_bad title = claw_transit_ketu_12 left_icon = root }
+				play_music_cue = mx_cue_negative
+			}
+			else = { send_interface_message = { type = event_toast_effect_neutral title = claw_transit_ketu_12 left_icon = root } }
+		}
 	}
 }
