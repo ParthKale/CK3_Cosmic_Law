@@ -1,0 +1,111 @@
+# Rashi (sign) relationships: Mitra (friendly) / Shatru (enemy) by position from sign.
+# Position 2,4,5,9,11,12 = Mitra; 3,6,7,8,10 = Shatru; 1 = same.
+# Order: 1 Mesha, 2 Vrishabha, 3 Mithuna, 4 Karka, 5 Simha, 6 Kanya, 7 Tula, 8 Vrischika, 9 Dhanu, 10 Makara, 11 Kumbha, 12 Meena.
+
+# Scope has a Rashi that is Mitra (friendly) to root's Rashi. Requires both to have a Rashi trait.
+claw_scope_has_mitra_rashi_to_root = {
+	OR = {
+		AND = { has_trait = rashi_mesha
+			scope = { OR = { has_trait = rashi_vrishabha has_trait = rashi_karka has_trait = rashi_simha has_trait = rashi_kanya has_trait = rashi_dhanu has_trait = rashi_kumbha has_trait = rashi_meena } } }
+		AND = { has_trait = rashi_vrishabha
+			scope = { OR = { has_trait = rashi_mithuna has_trait = rashi_simha has_trait = rashi_kanya has_trait = rashi_tula has_trait = rashi_makara has_trait = rashi_meena has_trait = rashi_mesha } } }
+		AND = { has_trait = rashi_mithuna
+			scope = { OR = { has_trait = rashi_karka has_trait = rashi_kanya has_trait = rashi_tula has_trait = rashi_vrischika has_trait = rashi_makara has_trait = rashi_mesha has_trait = rashi_vrishabha } } }
+		AND = { has_trait = rashi_karka
+			scope = { OR = { has_trait = rashi_simha has_trait = rashi_tula has_trait = rashi_vrischika has_trait = rashi_dhanu has_trait = rashi_kumbha has_trait = rashi_vrishabha has_trait = rashi_mithuna } } }
+		AND = { has_trait = rashi_simha
+			scope = { OR = { has_trait = rashi_kanya has_trait = rashi_vrischika has_trait = rashi_dhanu has_trait = rashi_makara has_trait = rashi_meena has_trait = rashi_mithuna has_trait = rashi_karka } } }
+		AND = { has_trait = rashi_kanya
+			scope = { OR = { has_trait = rashi_tula has_trait = rashi_dhanu has_trait = rashi_makara has_trait = rashi_kumbha has_trait = rashi_mesha has_trait = rashi_karka has_trait = rashi_simha } } }
+		AND = { has_trait = rashi_tula
+			scope = { OR = { has_trait = rashi_vrischika has_trait = rashi_makara has_trait = rashi_kumbha has_trait = rashi_meena has_trait = rashi_vrishabha has_trait = rashi_simha has_trait = rashi_kanya } } }
+		AND = { has_trait = rashi_vrischika
+			scope = { OR = { has_trait = rashi_dhanu has_trait = rashi_kumbha has_trait = rashi_meena has_trait = rashi_mesha has_trait = rashi_mithuna has_trait = rashi_kanya has_trait = rashi_tula } } }
+		AND = { has_trait = rashi_dhanu
+			scope = { OR = { has_trait = rashi_makara has_trait = rashi_meena has_trait = rashi_mesha has_trait = rashi_vrishabha has_trait = rashi_karka has_trait = rashi_tula has_trait = rashi_vrischika } } }
+		AND = { has_trait = rashi_makara
+			scope = { OR = { has_trait = rashi_kumbha has_trait = rashi_mesha has_trait = rashi_vrishabha has_trait = rashi_mithuna has_trait = rashi_simha has_trait = rashi_vrischika has_trait = rashi_dhanu } } }
+		AND = { has_trait = rashi_kumbha
+			scope = { OR = { has_trait = rashi_meena has_trait = rashi_vrishabha has_trait = rashi_mithuna has_trait = rashi_karka has_trait = rashi_dhanu has_trait = rashi_makara has_trait = rashi_vrischika } } }
+		AND = { has_trait = rashi_meena
+			scope = { OR = { has_trait = rashi_mesha has_trait = rashi_mithuna has_trait = rashi_karka has_trait = rashi_simha has_trait = rashi_vrischika has_trait = rashi_dhanu has_trait = rashi_kumbha } } }
+	}
+}
+
+# Scope has a Rashi that is Shatru (enemy) to root's Rashi.
+claw_scope_has_shatru_rashi_to_root = {
+	OR = {
+		AND = { has_trait = rashi_mesha
+			scope = { OR = { has_trait = rashi_mithuna has_trait = rashi_tula has_trait = rashi_vrischika has_trait = rashi_makara } } }
+		AND = { has_trait = rashi_vrishabha
+			scope = { OR = { has_trait = rashi_karka has_trait = rashi_vrischika has_trait = rashi_dhanu has_trait = rashi_kumbha } } }
+		AND = { has_trait = rashi_mithuna
+			scope = { OR = { has_trait = rashi_simha has_trait = rashi_dhanu has_trait = rashi_makara has_trait = rashi_meena } } }
+		AND = { has_trait = rashi_karka
+			scope = { OR = { has_trait = rashi_kanya has_trait = rashi_makara has_trait = rashi_kumbha has_trait = rashi_meena } } }
+		AND = { has_trait = rashi_simha
+			scope = { OR = { has_trait = rashi_tula has_trait = rashi_kumbha has_trait = rashi_meena has_trait = rashi_mesha } } }
+		AND = { has_trait = rashi_kanya
+			scope = { OR = { has_trait = rashi_vrischika has_trait = rashi_meena has_trait = rashi_mesha has_trait = rashi_vrishabha } } }
+		AND = { has_trait = rashi_tula
+			scope = { OR = { has_trait = rashi_dhanu has_trait = rashi_mesha has_trait = rashi_vrishabha has_trait = rashi_mithuna } } }
+		AND = { has_trait = rashi_vrischika
+			scope = { OR = { has_trait = rashi_makara has_trait = rashi_vrishabha has_trait = rashi_mithuna has_trait = rashi_karka } } }
+		AND = { has_trait = rashi_dhanu
+			scope = { OR = { has_trait = rashi_kumbha has_trait = rashi_mithuna has_trait = rashi_karka has_trait = rashi_simha } } }
+		AND = { has_trait = rashi_makara
+			scope = { OR = { has_trait = rashi_meena has_trait = rashi_karka has_trait = rashi_simha has_trait = rashi_kanya } } }
+		AND = { has_trait = rashi_kumbha
+			scope = { OR = { has_trait = rashi_mesha has_trait = rashi_simha has_trait = rashi_kanya has_trait = rashi_tula } } }
+		AND = { has_trait = rashi_meena
+			scope = { OR = { has_trait = rashi_vrishabha has_trait = rashi_kanya has_trait = rashi_tula has_trait = rashi_vrischika } } }
+	}
+}
+
+# At least one planet is in root's Rashi (Rashi lord / own sign). Root = character.
+claw_any_planet_in_own_rashi = {
+	OR = {
+		AND = { has_trait = rashi_mesha
+			OR = { global_var:global_surya_rashi = 1 global_var:global_chandra_rashi = 1 global_var:global_mangal_rashi = 1 global_var:global_budh_rashi = 1 global_var:global_guru_rashi = 1 global_var:global_shukra_rashi = 1 global_var:global_shani_rashi = 1 global_var:global_rahu_rashi = 1 global_var:global_ketu_rashi = 1 } }
+		AND = { has_trait = rashi_vrishabha
+			OR = { global_var:global_surya_rashi = 2 global_var:global_chandra_rashi = 2 global_var:global_mangal_rashi = 2 global_var:global_budh_rashi = 2 global_var:global_guru_rashi = 2 global_var:global_shukra_rashi = 2 global_var:global_shani_rashi = 2 global_var:global_rahu_rashi = 2 global_var:global_ketu_rashi = 2 } }
+		AND = { has_trait = rashi_mithuna
+			OR = { global_var:global_surya_rashi = 3 global_var:global_chandra_rashi = 3 global_var:global_mangal_rashi = 3 global_var:global_budh_rashi = 3 global_var:global_guru_rashi = 3 global_var:global_shukra_rashi = 3 global_var:global_shani_rashi = 3 global_var:global_rahu_rashi = 3 global_var:global_ketu_rashi = 3 } }
+		AND = { has_trait = rashi_karka
+			OR = { global_var:global_surya_rashi = 4 global_var:global_chandra_rashi = 4 global_var:global_mangal_rashi = 4 global_var:global_budh_rashi = 4 global_var:global_guru_rashi = 4 global_var:global_shukra_rashi = 4 global_var:global_shani_rashi = 4 global_var:global_rahu_rashi = 4 global_var:global_ketu_rashi = 4 } }
+		AND = { has_trait = rashi_simha
+			OR = { global_var:global_surya_rashi = 5 global_var:global_chandra_rashi = 5 global_var:global_mangal_rashi = 5 global_var:global_budh_rashi = 5 global_var:global_guru_rashi = 5 global_var:global_shukra_rashi = 5 global_var:global_shani_rashi = 5 global_var:global_rahu_rashi = 5 global_var:global_ketu_rashi = 5 } }
+		AND = { has_trait = rashi_kanya
+			OR = { global_var:global_surya_rashi = 6 global_var:global_chandra_rashi = 6 global_var:global_mangal_rashi = 6 global_var:global_budh_rashi = 6 global_var:global_guru_rashi = 6 global_var:global_shukra_rashi = 6 global_var:global_shani_rashi = 6 global_var:global_rahu_rashi = 6 global_var:global_ketu_rashi = 6 } }
+		AND = { has_trait = rashi_tula
+			OR = { global_var:global_surya_rashi = 7 global_var:global_chandra_rashi = 7 global_var:global_mangal_rashi = 7 global_var:global_budh_rashi = 7 global_var:global_guru_rashi = 7 global_var:global_shukra_rashi = 7 global_var:global_shani_rashi = 7 global_var:global_rahu_rashi = 7 global_var:global_ketu_rashi = 7 } }
+		AND = { has_trait = rashi_vrischika
+			OR = { global_var:global_surya_rashi = 8 global_var:global_chandra_rashi = 8 global_var:global_mangal_rashi = 8 global_var:global_budh_rashi = 8 global_var:global_guru_rashi = 8 global_var:global_shukra_rashi = 8 global_var:global_shani_rashi = 8 global_var:global_rahu_rashi = 8 global_var:global_ketu_rashi = 8 } }
+		AND = { has_trait = rashi_dhanu
+			OR = { global_var:global_surya_rashi = 9 global_var:global_chandra_rashi = 9 global_var:global_mangal_rashi = 9 global_var:global_budh_rashi = 9 global_var:global_guru_rashi = 9 global_var:global_shukra_rashi = 9 global_var:global_shani_rashi = 9 global_var:global_rahu_rashi = 9 global_var:global_ketu_rashi = 9 } }
+		AND = { has_trait = rashi_makara
+			OR = { global_var:global_surya_rashi = 10 global_var:global_chandra_rashi = 10 global_var:global_mangal_rashi = 10 global_var:global_budh_rashi = 10 global_var:global_guru_rashi = 10 global_var:global_shukra_rashi = 10 global_var:global_shani_rashi = 10 global_var:global_rahu_rashi = 10 global_var:global_ketu_rashi = 10 } }
+		AND = { has_trait = rashi_kumbha
+			OR = { global_var:global_surya_rashi = 11 global_var:global_chandra_rashi = 11 global_var:global_mangal_rashi = 11 global_var:global_budh_rashi = 11 global_var:global_guru_rashi = 11 global_var:global_shukra_rashi = 11 global_var:global_shani_rashi = 11 global_var:global_rahu_rashi = 11 global_var:global_ketu_rashi = 11 } }
+		AND = { has_trait = rashi_meena
+			OR = { global_var:global_surya_rashi = 12 global_var:global_chandra_rashi = 12 global_var:global_mangal_rashi = 12 global_var:global_budh_rashi = 12 global_var:global_guru_rashi = 12 global_var:global_shukra_rashi = 12 global_var:global_shani_rashi = 12 global_var:global_rahu_rashi = 12 global_var:global_ketu_rashi = 12 } }
+	}
+}
+
+# Scope has the same Rashi as root.
+claw_scope_has_same_rashi_as_root = {
+	OR = {
+		AND = { has_trait = rashi_mesha    scope = { has_trait = rashi_mesha } }
+		AND = { has_trait = rashi_vrishabha scope = { has_trait = rashi_vrishabha } }
+		AND = { has_trait = rashi_mithuna  scope = { has_trait = rashi_mithuna } }
+		AND = { has_trait = rashi_karka   scope = { has_trait = rashi_karka } }
+		AND = { has_trait = rashi_simha   scope = { has_trait = rashi_simha } }
+		AND = { has_trait = rashi_kanya   scope = { has_trait = rashi_kanya } }
+		AND = { has_trait = rashi_tula    scope = { has_trait = rashi_tula } }
+		AND = { has_trait = rashi_vrischika scope = { has_trait = rashi_vrischika } }
+		AND = { has_trait = rashi_dhanu   scope = { has_trait = rashi_dhanu } }
+		AND = { has_trait = rashi_makara  scope = { has_trait = rashi_makara } }
+		AND = { has_trait = rashi_kumbha  scope = { has_trait = rashi_kumbha } }
+		AND = { has_trait = rashi_meena   scope = { has_trait = rashi_meena } }
+	}
+}

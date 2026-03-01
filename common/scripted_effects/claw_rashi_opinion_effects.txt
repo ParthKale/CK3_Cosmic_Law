@@ -1,0 +1,77 @@
+# Apply Rashi compatibility opinion from root toward scope (e.g. spouse).
+# Call with scope = the other character; root = the one whose opinion we're setting.
+# Requires both to have Cosmic Law enabled and a Rashi trait.
+claw_add_rashi_opinion_toward_scope_effect = {
+	if = {
+		limit = {
+			cosmic_law_enabled_for_character = yes
+			scope = { cosmic_law_enabled_for_character = yes }
+			OR = {
+				has_trait = rashi_mesha
+				has_trait = rashi_vrishabha
+				has_trait = rashi_mithuna
+				has_trait = rashi_karka
+				has_trait = rashi_simha
+				has_trait = rashi_kanya
+				has_trait = rashi_tula
+				has_trait = rashi_vrischika
+				has_trait = rashi_dhanu
+				has_trait = rashi_makara
+				has_trait = rashi_kumbha
+				has_trait = rashi_meena
+			}
+			scope = {
+				OR = {
+					has_trait = rashi_mesha
+					has_trait = rashi_vrishabha
+					has_trait = rashi_mithuna
+					has_trait = rashi_karka
+					has_trait = rashi_simha
+					has_trait = rashi_kanya
+					has_trait = rashi_tula
+					has_trait = rashi_vrischika
+					has_trait = rashi_dhanu
+					has_trait = rashi_makara
+					has_trait = rashi_kumbha
+					has_trait = rashi_meena
+				}
+			}
+		}
+		if = {
+			limit = { claw_scope_has_same_rashi_as_root = yes }
+			add_opinion = {
+				target = scope
+				modifier = claw_rashi_same_opinion
+			}
+		}
+		else_if = {
+			limit = { claw_scope_has_mitra_rashi_to_root = yes }
+			add_opinion = {
+				target = scope
+				modifier = claw_rashi_mitra_opinion
+			}
+		}
+		else_if = {
+			limit = { claw_scope_has_shatru_rashi_to_root = yes }
+			add_opinion = {
+				target = scope
+				modifier = claw_rashi_shatru_opinion
+			}
+		}
+	}
+}
+
+# Yearly: for each character with a spouse, apply Rashi compatibility opinion both ways.
+claw_yearly_rashi_spouse_opinion_effect = {
+	every_playable_character = {
+		limit = {
+			cosmic_law_enabled_for_character = yes
+			exists = primary_spouse
+			primary_spouse = { is_alive = yes }
+		}
+		primary_spouse = {
+			claw_add_rashi_opinion_toward_scope_effect = { scope = root }
+		}
+		claw_add_rashi_opinion_toward_scope_effect = { scope = primary_spouse }
+	}
+}

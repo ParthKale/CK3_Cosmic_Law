@@ -1,4 +1,4 @@
-# Refresh planet–Rashi modifier for the character (root) once per year.
+# Refresh planet–Rashi modifier and Rashi compatibility opinion once per year.
 on_yearly_playable = {
 	on_actions = { claw_yearly_planet_modifier }
 }
@@ -6,5 +6,6 @@ on_yearly_playable = {
 claw_yearly_planet_modifier = {
 	effect = {
 		claw_apply_planet_rashi_modifier_effect = yes
+		claw_yearly_rashi_spouse_opinion_effect = yes
 	}
 }
