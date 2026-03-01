@@ -1,0 +1,16 @@
+# True if Cosmic Law mechanics should apply to the character in scope (game rule + religion when Cultural)
+cosmic_law_enabled_for_character = {
+	NOT = { has_game_rule = cosmic_law_scope_off }
+	OR = {
+		has_game_rule = cosmic_law_scope_global
+		AND = {
+			has_game_rule = cosmic_law_scope_cultural
+			religion = religion:hinduism_religion
+		}
+	}
+}
+
+# True if Cosmic Law Debug game rule is on (for showing debug decisions/events)
+cosmic_law_debug_enabled = {
+	has_game_rule = claw_debug_on
+}

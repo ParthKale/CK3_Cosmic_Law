@@ -1,0 +1,38 @@
+# Cosmic Law scope: who is affected by astrology (Rashi, planets, etc.)
+claw_scope = {
+	default = cosmic_law_scope_off
+
+	# Disabled: no Cosmic Law mechanics
+	cosmic_law_scope_off {
+	}
+
+	# Religious Focus: only characters with religion:hinduism_religion
+	cosmic_law_scope_cultural {
+	}
+
+	# Global: all characters
+	cosmic_law_scope_global {
+	}
+}
+
+# Optional: show Kundali panel in character view (for future Kundali UI)
+claw_kundali_visible = {
+	default = claw_kundali_visible_yes
+
+	claw_kundali_visible_yes {
+	}
+
+	claw_kundali_visible_no {
+	}
+}
+
+# Debug: when on, enables in-game debugging (decisions/events to show Rashi, planets, modifiers)
+claw_debug = {
+	default = claw_debug_off
+
+	claw_debug_off {
+	}
+
+	claw_debug_on {
+	}
+}
