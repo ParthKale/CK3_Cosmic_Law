@@ -1,31 +1,31 @@
 l_english:
-  # Cosmic Law game rules
-  rule_claw_scope: "Vedic Astrology Scope"
-  rule_claw_scope_desc: "Determines which characters are subject to Rashi (Moon sign) and Navagraha (planetary) mechanics."
+ # Cosmic Law game rules — use rule_ / setting_ keys and :0 for compatibility
+ rule_claw_scope:0 "Vedic Astrology Scope"
+ rule_claw_scope_desc:0 "Determines which characters are subject to the influence of the Navagraha (Planetary Transits)."
 
-  setting_cosmic_law_scope_off: "Disabled"
-  setting_cosmic_law_scope_off_desc: "Cosmic Law is inactive. No Rashi traits or planet transits."
+ setting_cosmic_law_scope_off:0 "Disabled"
+ setting_cosmic_law_scope_off_desc:0 "The entire Cosmic Law system is inactive."
 
-  setting_cosmic_law_scope_cultural: "Religious Focus (Hindu Only)"
-  setting_cosmic_law_scope_cultural_desc: "Only characters of the Hindu faith group are affected."
+ setting_cosmic_law_scope_cultural:0 "Cultural Focus (Hindu Only)"
+ setting_cosmic_law_scope_cultural_desc:0 "Only characters of the Hindu faith group are affected by planetary transits."
 
-  setting_cosmic_law_scope_global: "Cosmic Law (Global)"
-  setting_cosmic_law_scope_global_desc: "All characters are subject to Rashi and planetary transits."
+ setting_cosmic_law_scope_global:0 "Cosmic Law (Global)"
+ setting_cosmic_law_scope_global_desc:0 "All characters globally, regardless of faith, are subject to Rashi assignment and planetary transits."
 
-  rule_claw_kundali_visible: "Show Kundali in character view"
-  rule_claw_kundali_visible_desc: "When the Kundali UI is implemented, controls whether it is visible in the character window."
+ rule_claw_kundali_visible:0 "Show Kundali in character view"
+ rule_claw_kundali_visible_desc:0 "When the Kundali UI is implemented, controls whether it is visible in the character window."
 
-  setting_claw_kundali_visible_yes: "Yes"
-  setting_claw_kundali_visible_yes_desc: "Show Kundali panel when available."
+ setting_claw_kundali_visible_yes:0 "Yes"
+ setting_claw_kundali_visible_yes_desc:0 "Show Kundali panel when available."
 
-  setting_claw_kundali_visible_no: "No"
-  setting_claw_kundali_visible_no_desc: "Hide Kundali panel."
+ setting_claw_kundali_visible_no:0 "No"
+ setting_claw_kundali_visible_no_desc:0 "Hide Kundali panel."
 
-  rule_claw_debug: "Cosmic Law Debug"
-  rule_claw_debug_desc: "When on, enables debug decisions and events to inspect Rashi, planet positions, and modifiers in-game."
+ rule_claw_debug:0 "Cosmic Law Debug"
+ rule_claw_debug_desc:0 "When on, enables debug decisions and events to inspect Rashi, planet positions, and modifiers in-game."
 
-  setting_claw_debug_off: "Off"
-  setting_claw_debug_off_desc: "Normal play. No debug options."
+ setting_claw_debug_off:0 "Off"
+ setting_claw_debug_off_desc:0 "Normal play. No debug options."
 
-  setting_claw_debug_on: "On"
-  setting_claw_debug_on_desc: "Shows debug decisions (e.g. 'Debug: Show my Rashi') to verify mod behaviour."
+ setting_claw_debug_on:0 "On"
+ setting_claw_debug_on_desc:0 "Shows debug decisions (e.g. 'Debug: Show my Rashi') to verify mod behaviour."
