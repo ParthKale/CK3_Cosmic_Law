@@ -1,0 +1,20 @@
+# Cosmic Law: Rashi compatibility opinion (Mitra/Shatru) and Sade Sati
+
+claw_rashi_mitra_opinion = {
+	opinion = 15
+	years = 1
+	decaying = no
+}
+
+claw_rashi_shatru_opinion = {
+	opinion = -15
+	years = 1
+	decaying = no
+}
+
+# Same Rashi (optional extra on top of trait same_opinion)
+claw_rashi_same_opinion = {
+	opinion = 10
+	years = 1
+	decaying = no
+}
