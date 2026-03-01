@@ -1,0 +1,21 @@
+# Navagraha (9 planets): current Rashi (1-12) and days spent in that Rashi.
+# Used for day-based transit. Persist in save so positions do not change on reload.
+
+global_surya_rashi = { type = integer }
+global_surya_days = { type = integer }
+global_chandra_rashi = { type = integer }
+global_chandra_days = { type = integer }
+global_mangal_rashi = { type = integer }
+global_mangal_days = { type = integer }
+global_budh_rashi = { type = integer }
+global_budh_days = { type = integer }
+global_guru_rashi = { type = integer }
+global_guru_days = { type = integer }
+global_shukra_rashi = { type = integer }
+global_shukra_days = { type = integer }
+global_shani_rashi = { type = integer }
+global_shani_days = { type = integer }
+global_rahu_rashi = { type = integer }
+global_rahu_days = { type = integer }
+global_ketu_rashi = { type = integer }
+global_ketu_days = { type = integer }

@@ -1,0 +1,160 @@
+# Day-based transit: add 91 days (quarter) and advance planets when days >= transit_days.
+# Only when Cosmic Law is not Off.
+cosmic_law_quarterly_transit_tick = {
+	if = {
+		limit = { NOT = { has_game_rule = cosmic_law_scope_off } }
+		change_global_variable = { name = global_surya_days add = 91 }
+		change_global_variable = { name = global_chandra_days add = 91 }
+		change_global_variable = { name = global_mangal_days add = 91 }
+		change_global_variable = { name = global_budh_days add = 91 }
+		change_global_variable = { name = global_guru_days add = 91 }
+		change_global_variable = { name = global_shukra_days add = 91 }
+		change_global_variable = { name = global_shani_days add = 91 }
+		change_global_variable = { name = global_rahu_days add = 91 }
+		change_global_variable = { name = global_ketu_days add = 91 }
+		claw_advance_surya_tick = yes
+		claw_advance_chandra_tick = yes
+		claw_advance_mangal_tick = yes
+		claw_advance_budh_tick = yes
+		claw_advance_guru_tick = yes
+		claw_advance_shukra_tick = yes
+		claw_advance_shani_tick = yes
+		claw_advance_rahu_tick = yes
+		claw_advance_ketu_tick = yes
+	}
+}
+
+# Helper: advance one planet one step (rashi 12->1 else +1, days -= transit). Used in repeat blocks.
+claw_advance_surya_one = {
+	if = {
+		limit = { global_var:global_surya_days >= 30 }
+		if = { limit = { global_var:global_surya_rashi == 12 } set_global_variable = { name = global_surya_rashi value = 1 } }
+		else = { change_global_variable = { name = global_surya_rashi add = 1 } }
+		change_global_variable = { name = global_surya_days add = -30 }
+	}
+}
+claw_advance_surya_tick = {
+	claw_advance_surya_one = yes
+	claw_advance_surya_one = yes
+	claw_advance_surya_one = yes
+	claw_advance_surya_one = yes
+}
+claw_advance_chandra_one = {
+	if = {
+		limit = { global_var:global_chandra_days >= 3 }
+		if = { limit = { global_var:global_chandra_rashi == 12 } set_global_variable = { name = global_chandra_rashi value = 1 } }
+		else = { change_global_variable = { name = global_chandra_rashi add = 1 } }
+		change_global_variable = { name = global_chandra_days add = -3 }
+	}
+}
+claw_advance_chandra_tick = {
+	claw_advance_chandra_one = yes
+	claw_advance_chandra_one = yes
+	claw_advance_chandra_one = yes
+	claw_advance_chandra_one = yes
+	claw_advance_chandra_one = yes
+	claw_advance_chandra_one = yes
+	claw_advance_chandra_one = yes
+	claw_advance_chandra_one = yes
+	claw_advance_chandra_one = yes
+	claw_advance_chandra_one = yes
+	claw_advance_chandra_one = yes
+	claw_advance_chandra_one = yes
+	claw_advance_chandra_one = yes
+	claw_advance_chandra_one = yes
+	claw_advance_chandra_one = yes
+	claw_advance_chandra_one = yes
+	claw_advance_chandra_one = yes
+	claw_advance_chandra_one = yes
+	claw_advance_chandra_one = yes
+	claw_advance_chandra_one = yes
+	claw_advance_chandra_one = yes
+	claw_advance_chandra_one = yes
+	claw_advance_chandra_one = yes
+	claw_advance_chandra_one = yes
+	claw_advance_chandra_one = yes
+	claw_advance_chandra_one = yes
+	claw_advance_chandra_one = yes
+	claw_advance_chandra_one = yes
+	claw_advance_chandra_one = yes
+	claw_advance_chandra_one = yes
+	claw_advance_chandra_one = yes
+	claw_advance_chandra_one = yes
+}
+claw_advance_mangal_one = {
+	if = {
+		limit = { global_var:global_mangal_days >= 45 }
+		if = { limit = { global_var:global_mangal_rashi == 12 } set_global_variable = { name = global_mangal_rashi value = 1 } }
+		else = { change_global_variable = { name = global_mangal_rashi add = 1 } }
+		change_global_variable = { name = global_mangal_days add = -45 }
+	}
+}
+claw_advance_mangal_tick = {
+	claw_advance_mangal_one = yes
+	claw_advance_mangal_one = yes
+	claw_advance_mangal_one = yes
+}
+claw_advance_budh_one = {
+	if = {
+		limit = { global_var:global_budh_days >= 30 }
+		if = { limit = { global_var:global_budh_rashi == 12 } set_global_variable = { name = global_budh_rashi value = 1 } }
+		else = { change_global_variable = { name = global_budh_rashi add = 1 } }
+		change_global_variable = { name = global_budh_days add = -30 }
+	}
+}
+claw_advance_budh_tick = {
+	claw_advance_budh_one = yes
+	claw_advance_budh_one = yes
+	claw_advance_budh_one = yes
+	claw_advance_budh_one = yes
+}
+claw_advance_guru_one = {
+	if = {
+		limit = { global_var:global_guru_days >= 360 }
+		if = { limit = { global_var:global_guru_rashi == 12 } set_global_variable = { name = global_guru_rashi value = 1 } }
+		else = { change_global_variable = { name = global_guru_rashi add = 1 } }
+		change_global_variable = { name = global_guru_days add = -360 }
+	}
+}
+claw_advance_guru_tick = { claw_advance_guru_one = yes }
+claw_advance_shukra_one = {
+	if = {
+		limit = { global_var:global_shukra_days >= 30 }
+		if = { limit = { global_var:global_shukra_rashi == 12 } set_global_variable = { name = global_shukra_rashi value = 1 } }
+		else = { change_global_variable = { name = global_shukra_rashi add = 1 } }
+		change_global_variable = { name = global_shukra_days add = -30 }
+	}
+}
+claw_advance_shukra_tick = {
+	claw_advance_shukra_one = yes
+	claw_advance_shukra_one = yes
+	claw_advance_shukra_one = yes
+	claw_advance_shukra_one = yes
+}
+claw_advance_shani_one = {
+	if = {
+		limit = { global_var:global_shani_days >= 912 }
+		if = { limit = { global_var:global_shani_rashi == 12 } set_global_variable = { name = global_shani_rashi value = 1 } }
+		else = { change_global_variable = { name = global_shani_rashi add = 1 } }
+		change_global_variable = { name = global_shani_days add = -912 }
+	}
+}
+claw_advance_shani_tick = { claw_advance_shani_one = yes }
+claw_advance_rahu_one = {
+	if = {
+		limit = { global_var:global_rahu_days >= 548 }
+		if = { limit = { global_var:global_rahu_rashi == 12 } set_global_variable = { name = global_rahu_rashi value = 1 } }
+		else = { change_global_variable = { name = global_rahu_rashi add = 1 } }
+		change_global_variable = { name = global_rahu_days add = -548 }
+	}
+}
+claw_advance_rahu_tick = { claw_advance_rahu_one = yes }
+claw_advance_ketu_one = {
+	if = {
+		limit = { global_var:global_ketu_days >= 548 }
+		if = { limit = { global_var:global_ketu_rashi == 12 } set_global_variable = { name = global_ketu_rashi value = 1 } }
+		else = { change_global_variable = { name = global_ketu_rashi add = 1 } }
+		change_global_variable = { name = global_ketu_days add = -548 }
+	}
+}
+claw_advance_ketu_tick = { claw_advance_ketu_one = yes }

@@ -1,0 +1,153 @@
+# Initialize all 9 planet positions to a random Rashi (1-12) and 0 days.
+# Call only from on_game_start (not on load), so positions persist in save.
+initialize_planet_positions_effect = {
+	if = {
+		limit = {
+			NOT = { has_game_rule = cosmic_law_scope_off }
+		}
+		# Surya (Sun)
+		random_list = {
+			1 = { set_global_variable = { name = global_surya_rashi value = 1 } }
+			1 = { set_global_variable = { name = global_surya_rashi value = 2 } }
+			1 = { set_global_variable = { name = global_surya_rashi value = 3 } }
+			1 = { set_global_variable = { name = global_surya_rashi value = 4 } }
+			1 = { set_global_variable = { name = global_surya_rashi value = 5 } }
+			1 = { set_global_variable = { name = global_surya_rashi value = 6 } }
+			1 = { set_global_variable = { name = global_surya_rashi value = 7 } }
+			1 = { set_global_variable = { name = global_surya_rashi value = 8 } }
+			1 = { set_global_variable = { name = global_surya_rashi value = 9 } }
+			1 = { set_global_variable = { name = global_surya_rashi value = 10 } }
+			1 = { set_global_variable = { name = global_surya_rashi value = 11 } }
+			1 = { set_global_variable = { name = global_surya_rashi value = 12 } }
+		}
+		set_global_variable = { name = global_surya_days value = 0 }
+		# Chandra (Moon)
+		random_list = {
+			1 = { set_global_variable = { name = global_chandra_rashi value = 1 } }
+			1 = { set_global_variable = { name = global_chandra_rashi value = 2 } }
+			1 = { set_global_variable = { name = global_chandra_rashi value = 3 } }
+			1 = { set_global_variable = { name = global_chandra_rashi value = 4 } }
+			1 = { set_global_variable = { name = global_chandra_rashi value = 5 } }
+			1 = { set_global_variable = { name = global_chandra_rashi value = 6 } }
+			1 = { set_global_variable = { name = global_chandra_rashi value = 7 } }
+			1 = { set_global_variable = { name = global_chandra_rashi value = 8 } }
+			1 = { set_global_variable = { name = global_chandra_rashi value = 9 } }
+			1 = { set_global_variable = { name = global_chandra_rashi value = 10 } }
+			1 = { set_global_variable = { name = global_chandra_rashi value = 11 } }
+			1 = { set_global_variable = { name = global_chandra_rashi value = 12 } }
+		}
+		set_global_variable = { name = global_chandra_days value = 0 }
+		# Mangal (Mars)
+		random_list = {
+			1 = { set_global_variable = { name = global_mangal_rashi value = 1 } }
+			1 = { set_global_variable = { name = global_mangal_rashi value = 2 } }
+			1 = { set_global_variable = { name = global_mangal_rashi value = 3 } }
+			1 = { set_global_variable = { name = global_mangal_rashi value = 4 } }
+			1 = { set_global_variable = { name = global_mangal_rashi value = 5 } }
+			1 = { set_global_variable = { name = global_mangal_rashi value = 6 } }
+			1 = { set_global_variable = { name = global_mangal_rashi value = 7 } }
+			1 = { set_global_variable = { name = global_mangal_rashi value = 8 } }
+			1 = { set_global_variable = { name = global_mangal_rashi value = 9 } }
+			1 = { set_global_variable = { name = global_mangal_rashi value = 10 } }
+			1 = { set_global_variable = { name = global_mangal_rashi value = 11 } }
+			1 = { set_global_variable = { name = global_mangal_rashi value = 12 } }
+		}
+		set_global_variable = { name = global_mangal_days value = 0 }
+		# Budh (Mercury)
+		random_list = {
+			1 = { set_global_variable = { name = global_budh_rashi value = 1 } }
+			1 = { set_global_variable = { name = global_budh_rashi value = 2 } }
+			1 = { set_global_variable = { name = global_budh_rashi value = 3 } }
+			1 = { set_global_variable = { name = global_budh_rashi value = 4 } }
+			1 = { set_global_variable = { name = global_budh_rashi value = 5 } }
+			1 = { set_global_variable = { name = global_budh_rashi value = 6 } }
+			1 = { set_global_variable = { name = global_budh_rashi value = 7 } }
+			1 = { set_global_variable = { name = global_budh_rashi value = 8 } }
+			1 = { set_global_variable = { name = global_budh_rashi value = 9 } }
+			1 = { set_global_variable = { name = global_budh_rashi value = 10 } }
+			1 = { set_global_variable = { name = global_budh_rashi value = 11 } }
+			1 = { set_global_variable = { name = global_budh_rashi value = 12 } }
+		}
+		set_global_variable = { name = global_budh_days value = 0 }
+		# Guru (Jupiter)
+		random_list = {
+			1 = { set_global_variable = { name = global_guru_rashi value = 1 } }
+			1 = { set_global_variable = { name = global_guru_rashi value = 2 } }
+			1 = { set_global_variable = { name = global_guru_rashi value = 3 } }
+			1 = { set_global_variable = { name = global_guru_rashi value = 4 } }
+			1 = { set_global_variable = { name = global_guru_rashi value = 5 } }
+			1 = { set_global_variable = { name = global_guru_rashi value = 6 } }
+			1 = { set_global_variable = { name = global_guru_rashi value = 7 } }
+			1 = { set_global_variable = { name = global_guru_rashi value = 8 } }
+			1 = { set_global_variable = { name = global_guru_rashi value = 9 } }
+			1 = { set_global_variable = { name = global_guru_rashi value = 10 } }
+			1 = { set_global_variable = { name = global_guru_rashi value = 11 } }
+			1 = { set_global_variable = { name = global_guru_rashi value = 12 } }
+		}
+		set_global_variable = { name = global_guru_days value = 0 }
+		# Shukra (Venus)
+		random_list = {
+			1 = { set_global_variable = { name = global_shukra_rashi value = 1 } }
+			1 = { set_global_variable = { name = global_shukra_rashi value = 2 } }
+			1 = { set_global_variable = { name = global_shukra_rashi value = 3 } }
+			1 = { set_global_variable = { name = global_shukra_rashi value = 4 } }
+			1 = { set_global_variable = { name = global_shukra_rashi value = 5 } }
+			1 = { set_global_variable = { name = global_shukra_rashi value = 6 } }
+			1 = { set_global_variable = { name = global_shukra_rashi value = 7 } }
+			1 = { set_global_variable = { name = global_shukra_rashi value = 8 } }
+			1 = { set_global_variable = { name = global_shukra_rashi value = 9 } }
+			1 = { set_global_variable = { name = global_shukra_rashi value = 10 } }
+			1 = { set_global_variable = { name = global_shukra_rashi value = 11 } }
+			1 = { set_global_variable = { name = global_shukra_rashi value = 12 } }
+		}
+		set_global_variable = { name = global_shukra_days value = 0 }
+		# Shani (Saturn)
+		random_list = {
+			1 = { set_global_variable = { name = global_shani_rashi value = 1 } }
+			1 = { set_global_variable = { name = global_shani_rashi value = 2 } }
+			1 = { set_global_variable = { name = global_shani_rashi value = 3 } }
+			1 = { set_global_variable = { name = global_shani_rashi value = 4 } }
+			1 = { set_global_variable = { name = global_shani_rashi value = 5 } }
+			1 = { set_global_variable = { name = global_shani_rashi value = 6 } }
+			1 = { set_global_variable = { name = global_shani_rashi value = 7 } }
+			1 = { set_global_variable = { name = global_shani_rashi value = 8 } }
+			1 = { set_global_variable = { name = global_shani_rashi value = 9 } }
+			1 = { set_global_variable = { name = global_shani_rashi value = 10 } }
+			1 = { set_global_variable = { name = global_shani_rashi value = 11 } }
+			1 = { set_global_variable = { name = global_shani_rashi value = 12 } }
+		}
+		set_global_variable = { name = global_shani_days value = 0 }
+		# Rahu
+		random_list = {
+			1 = { set_global_variable = { name = global_rahu_rashi value = 1 } }
+			1 = { set_global_variable = { name = global_rahu_rashi value = 2 } }
+			1 = { set_global_variable = { name = global_rahu_rashi value = 3 } }
+			1 = { set_global_variable = { name = global_rahu_rashi value = 4 } }
+			1 = { set_global_variable = { name = global_rahu_rashi value = 5 } }
+			1 = { set_global_variable = { name = global_rahu_rashi value = 6 } }
+			1 = { set_global_variable = { name = global_rahu_rashi value = 7 } }
+			1 = { set_global_variable = { name = global_rahu_rashi value = 8 } }
+			1 = { set_global_variable = { name = global_rahu_rashi value = 9 } }
+			1 = { set_global_variable = { name = global_rahu_rashi value = 10 } }
+			1 = { set_global_variable = { name = global_rahu_rashi value = 11 } }
+			1 = { set_global_variable = { name = global_rahu_rashi value = 12 } }
+		}
+		set_global_variable = { name = global_rahu_days value = 0 }
+		# Ketu
+		random_list = {
+			1 = { set_global_variable = { name = global_ketu_rashi value = 1 } }
+			1 = { set_global_variable = { name = global_ketu_rashi value = 2 } }
+			1 = { set_global_variable = { name = global_ketu_rashi value = 3 } }
+			1 = { set_global_variable = { name = global_ketu_rashi value = 4 } }
+			1 = { set_global_variable = { name = global_ketu_rashi value = 5 } }
+			1 = { set_global_variable = { name = global_ketu_rashi value = 6 } }
+			1 = { set_global_variable = { name = global_ketu_rashi value = 7 } }
+			1 = { set_global_variable = { name = global_ketu_rashi value = 8 } }
+			1 = { set_global_variable = { name = global_ketu_rashi value = 9 } }
+			1 = { set_global_variable = { name = global_ketu_rashi value = 10 } }
+			1 = { set_global_variable = { name = global_ketu_rashi value = 11 } }
+			1 = { set_global_variable = { name = global_ketu_rashi value = 12 } }
+		}
+		set_global_variable = { name = global_ketu_days value = 0 }
+	}
+}

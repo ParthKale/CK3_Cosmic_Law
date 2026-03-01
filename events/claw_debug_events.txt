@@ -31,3 +31,14 @@ claw_debug.1 = {
 		name = claw_debug_event_rashi_ok
 	}
 }
+
+# Debug: Show current planet positions (Rashi 1-12). Root = character.
+claw_debug.2 = {
+	type = character_event
+	title = claw_debug_event_planets_title
+	desc = claw_debug_event_planets_desc
+	theme = learning
+	left_portrait = root
+	immediate = {}
+	option = { name = claw_debug_event_rashi_ok }
+}

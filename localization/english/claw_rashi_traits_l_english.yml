@@ -43,3 +43,7 @@ l_english:
   claw_debug_event_rashi_desc:0 "Your Moon sign (Janma Rashi) is shown below. Use this to verify that Rashi assignment is working."
   claw_debug_event_rashi_none:0 "No Rashi assigned (Cosmic Law may be Disabled or character out of scope)."
   claw_debug_event_rashi_ok:0 "Close"
+  claw_debug_show_planets_decision:0 "Debug: Show planet positions"
+  claw_debug_show_planets_decision_desc:0 "Only when Debug is On. Shows current Navagraha positions (Rashi 1-12)."
+  claw_debug_event_planets_title:0 "Cosmic Law Debug — Planets"
+  claw_debug_event_planets_desc:0 "Planet transits run every quarter (day-based). Positions: Surya, Chandra, Mangal, Budh, Guru, Shukra, Shani, Rahu, Ketu — each in Rashi 1-12. Reload and advance time to see changes."

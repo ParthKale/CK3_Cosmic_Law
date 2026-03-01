@@ -1,0 +1,10 @@
+# Hook into quarterly pulse to advance planet positions (day-based transit).
+on_quarterly_playable_pulse = {
+	on_actions = { claw_quarterly_transit_tick }
+}
+
+claw_quarterly_transit_tick = {
+	effect = {
+		cosmic_law_quarterly_transit_tick = yes
+	}
+}
